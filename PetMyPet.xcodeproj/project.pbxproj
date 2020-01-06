@@ -21,6 +21,11 @@
 		521DF7FC23BEB50000B275A9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DF7FB23BEB50000B275A9 /* HomeViewModel.swift */; };
 		521DF7FF23BEB53E00B275A9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DF7FD23BEB53E00B275A9 /* HomeViewController.swift */; };
 		521DF80023BEB53E00B275A9 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 521DF7FE23BEB53E00B275A9 /* HomeViewController.xib */; };
+		52223ED223C3EE24004E9B4B /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52223ED123C3EE24004E9B4B /* SettingsCoordinator.swift */; };
+		52223ED423C3EE35004E9B4B /* SettingsCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52223ED323C3EE35004E9B4B /* SettingsCoordinatorDelegate.swift */; };
+		52223ED623C3EEBC004E9B4B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52223ED523C3EEBC004E9B4B /* SettingsViewModel.swift */; };
+		52223ED923C3EED9004E9B4B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52223ED723C3EED9004E9B4B /* SettingsViewController.swift */; };
+		52223EDA23C3EED9004E9B4B /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52223ED823C3EED9004E9B4B /* SettingsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +57,11 @@
 		521DF7FB23BEB50000B275A9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		521DF7FD23BEB53E00B275A9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		521DF7FE23BEB53E00B275A9 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		52223ED123C3EE24004E9B4B /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		52223ED323C3EE35004E9B4B /* SettingsCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		52223ED523C3EEBC004E9B4B /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		52223ED723C3EED9004E9B4B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		52223ED823C3EED9004E9B4B /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +161,7 @@
 		521DF7F023BEB36D00B275A9 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				52223ECC23C3EDCE004E9B4B /* Settings */,
 				521DF7F123BEB38600B275A9 /* Home */,
 			);
 			path = Sections;
@@ -179,6 +190,7 @@
 		521DF7F423BEB3B400B275A9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				52223ECB23C3ED8B004E9B4B /* Cells */,
 				521DF7FD23BEB53E00B275A9 /* HomeViewController.swift */,
 				521DF7FE23BEB53E00B275A9 /* HomeViewController.xib */,
 			);
@@ -194,6 +206,57 @@
 			sourceTree = "<group>";
 		};
 		521DF7F623BEB3BF00B275A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52223ECB23C3ED8B004E9B4B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		52223ECC23C3EDCE004E9B4B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				52223ED023C3EDF1004E9B4B /* Model */,
+				52223ECE23C3EDE5004E9B4B /* View */,
+				52223ECF23C3EDEB004E9B4B /* ViewModel */,
+				52223ECD23C3EDD9004E9B4B /* Coordinator */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		52223ECD23C3EDD9004E9B4B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				52223ED123C3EE24004E9B4B /* SettingsCoordinator.swift */,
+				52223ED323C3EE35004E9B4B /* SettingsCoordinatorDelegate.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		52223ECE23C3EDE5004E9B4B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52223ED723C3EED9004E9B4B /* SettingsViewController.swift */,
+				52223ED823C3EED9004E9B4B /* SettingsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52223ECF23C3EDEB004E9B4B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52223ED523C3EEBC004E9B4B /* SettingsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		52223ED023C3EDF1004E9B4B /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -285,6 +348,7 @@
 				521DF7CF23BEA47B00B275A9 /* Preview Assets.xcassets in Resources */,
 				521DF7CC23BEA47B00B275A9 /* Assets.xcassets in Resources */,
 				521DF80023BEB53E00B275A9 /* HomeViewController.xib in Resources */,
+				52223EDA23C3EED9004E9B4B /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,12 +369,16 @@
 				521DF7EC23BEB02A00B275A9 /* Coordinator.swift in Sources */,
 				521DF7C623BEA47A00B275A9 /* AppDelegate.swift in Sources */,
 				521DF7EE23BEB04000B275A9 /* AppCoordinator.swift in Sources */,
+				52223ED423C3EE35004E9B4B /* SettingsCoordinatorDelegate.swift in Sources */,
 				521DF7FC23BEB50000B275A9 /* HomeViewModel.swift in Sources */,
 				521DF7FA23BEB4C500B275A9 /* HomeCoordinatorDelegate.swift in Sources */,
+				52223ED223C3EE24004E9B4B /* SettingsCoordinator.swift in Sources */,
 				521DF7FF23BEB53E00B275A9 /* HomeViewController.swift in Sources */,
 				521DF7EA23BEB00E00B275A9 /* BaseCoordinator.swift in Sources */,
 				521DF7C823BEA47A00B275A9 /* SceneDelegate.swift in Sources */,
+				52223ED923C3EED9004E9B4B /* SettingsViewController.swift in Sources */,
 				521DF7F823BEB3E700B275A9 /* HomeCoordinator.swift in Sources */,
+				52223ED623C3EEBC004E9B4B /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
