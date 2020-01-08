@@ -145,6 +145,7 @@
 		521DF7E823BEAFE500B275A9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				52223EDC23C3EFAC004E9B4B /* Components */,
 				521DF7EF23BEB27F00B275A9 /* Protocols */,
 			);
 			path = Helpers;
@@ -161,7 +162,7 @@
 		521DF7F023BEB36D00B275A9 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				52223ECC23C3EDCE004E9B4B /* Settings */,
+				52223EDB23C3EF78004E9B4B /* PersonalData */,
 				521DF7F123BEB38600B275A9 /* Home */,
 			);
 			path = Sections;
@@ -261,6 +262,21 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		52223EDB23C3EF78004E9B4B /* PersonalData */ = {
+			isa = PBXGroup;
+			children = (
+				52223ECC23C3EDCE004E9B4B /* Settings */,
+			);
+			path = PersonalData;
+			sourceTree = "<group>";
+		};
+		52223EDC23C3EFAC004E9B4B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
