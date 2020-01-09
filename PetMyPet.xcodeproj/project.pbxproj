@@ -26,6 +26,11 @@
 		52223ED623C3EEBC004E9B4B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52223ED523C3EEBC004E9B4B /* SettingsViewModel.swift */; };
 		52223ED923C3EED9004E9B4B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52223ED723C3EED9004E9B4B /* SettingsViewController.swift */; };
 		52223EDA23C3EED9004E9B4B /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52223ED823C3EED9004E9B4B /* SettingsViewController.xib */; };
+		5233276423C6B48900ED014E /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233276323C6B48900ED014E /* LoginCoordinator.swift */; };
+		5233276623C6B4EA00ED014E /* LoginCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233276523C6B4EA00ED014E /* LoginCoordinatorDelegate.swift */; };
+		5233276823C6B52300ED014E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233276723C6B52300ED014E /* LoginViewModel.swift */; };
+		5233276B23C6B55B00ED014E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233276923C6B55B00ED014E /* LoginViewController.swift */; };
+		5233276C23C6B55B00ED014E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5233276A23C6B55B00ED014E /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +67,11 @@
 		52223ED523C3EEBC004E9B4B /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		52223ED723C3EED9004E9B4B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		52223ED823C3EED9004E9B4B /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		5233276323C6B48900ED014E /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		5233276523C6B4EA00ED014E /* LoginCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		5233276723C6B52300ED014E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		5233276923C6B55B00ED014E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5233276A23C6B55B00ED014E /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +172,7 @@
 		521DF7F023BEB36D00B275A9 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				5233275E23C6B37400ED014E /* Login */,
 				52223EDB23C3EF78004E9B4B /* PersonalData */,
 				521DF7F123BEB38600B275A9 /* Home */,
 			);
@@ -279,6 +290,50 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		5233275E23C6B37400ED014E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5233275F23C6B38D00ED014E /* Model */,
+				5233276023C6B39D00ED014E /* View */,
+				5233276123C6B3A400ED014E /* ViewModel */,
+				5233276223C6B3AB00ED014E /* Coordinator */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		5233275F23C6B38D00ED014E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5233276023C6B39D00ED014E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5233276923C6B55B00ED014E /* LoginViewController.swift */,
+				5233276A23C6B55B00ED014E /* LoginViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5233276123C6B3A400ED014E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5233276723C6B52300ED014E /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5233276223C6B3AB00ED014E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				5233276323C6B48900ED014E /* LoginCoordinator.swift */,
+				5233276523C6B4EA00ED014E /* LoginCoordinatorDelegate.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -362,6 +417,7 @@
 			files = (
 				521DF7D223BEA47B00B275A9 /* LaunchScreen.storyboard in Resources */,
 				521DF7CF23BEA47B00B275A9 /* Preview Assets.xcassets in Resources */,
+				5233276C23C6B55B00ED014E /* LoginViewController.xib in Resources */,
 				521DF7CC23BEA47B00B275A9 /* Assets.xcassets in Resources */,
 				521DF80023BEB53E00B275A9 /* HomeViewController.xib in Resources */,
 				52223EDA23C3EED9004E9B4B /* SettingsViewController.xib in Resources */,
@@ -384,7 +440,10 @@
 			files = (
 				521DF7EC23BEB02A00B275A9 /* Coordinator.swift in Sources */,
 				521DF7C623BEA47A00B275A9 /* AppDelegate.swift in Sources */,
+				5233276423C6B48900ED014E /* LoginCoordinator.swift in Sources */,
 				521DF7EE23BEB04000B275A9 /* AppCoordinator.swift in Sources */,
+				5233276823C6B52300ED014E /* LoginViewModel.swift in Sources */,
+				5233276623C6B4EA00ED014E /* LoginCoordinatorDelegate.swift in Sources */,
 				52223ED423C3EE35004E9B4B /* SettingsCoordinatorDelegate.swift in Sources */,
 				521DF7FC23BEB50000B275A9 /* HomeViewModel.swift in Sources */,
 				521DF7FA23BEB4C500B275A9 /* HomeCoordinatorDelegate.swift in Sources */,
@@ -392,6 +451,7 @@
 				521DF7FF23BEB53E00B275A9 /* HomeViewController.swift in Sources */,
 				521DF7EA23BEB00E00B275A9 /* BaseCoordinator.swift in Sources */,
 				521DF7C823BEA47A00B275A9 /* SceneDelegate.swift in Sources */,
+				5233276B23C6B55B00ED014E /* LoginViewController.swift in Sources */,
 				52223ED923C3EED9004E9B4B /* SettingsViewController.swift in Sources */,
 				521DF7F823BEB3E700B275A9 /* HomeCoordinator.swift in Sources */,
 				52223ED623C3EEBC004E9B4B /* SettingsViewModel.swift in Sources */,
