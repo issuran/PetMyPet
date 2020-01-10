@@ -13,7 +13,14 @@ class AppCoordinator: Coordinator {
     var window: UIWindow
     var navigationController: UINavigationController
     
+    // Login
+    var loginCoordinator: LoginCoordinator!
+    
+    // Home
     var homeCoordinator: HomeCoordinator!
+    
+    // Settings
+    var settingsCoordinator: SettingsCoordinator!
     
     required init(window: UIWindow) {
         self.window = window
@@ -23,7 +30,7 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        homeCoordinator = HomeCoordinator(navigationController: navigationController)
-        homeCoordinator.start()
+        loginCoordinator = LoginCoordinator(navigationController: navigationController)
+        loginCoordinator.start()
     }
 }
