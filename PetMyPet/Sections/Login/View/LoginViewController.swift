@@ -14,6 +14,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         createGradientBackground()
     }
     
@@ -27,18 +31,19 @@ class LoginViewController: UIViewController {
     }
     
     func createGradientBackground() {
-        let layer = CAGradientLayer()
-        layer.frame = view.bounds
-        let leftColor = UIColor(displayP3Red: 253/255, green: 197/255, blue: 83/255, alpha: 1.0).cgColor
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.frame
+        let upColor = UIColor(displayP3Red: 225/255, green: 115/255, blue: 140/255, alpha: 1.0).cgColor
         
-        let centerColor = UIColor(displayP3Red: 246/255, green: 133/255, blue: 99/255, alpha: 1.0).cgColor
+        let middleColor = UIColor(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0).cgColor
         
-        let rightColor = UIColor(displayP3Red: 237/255, green: 75/255, blue: 115/255, alpha: 1.0).cgColor
+        let downColor = UIColor(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0).cgColor
         
-        layer.colors = [rightColor, centerColor, leftColor]
+        gradientLayer.colors = [upColor, middleColor, downColor]
         /// To change gradient direction - vertical
 //        layer.startPoint = CGPoint(x: 0, y: 0)
 //        layer.endPoint = CGPoint(x: 1, y: 1)
-        view.layer.addSublayer(layer)
+//        view.layer.addSublayer(layer)
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
