@@ -9,7 +9,11 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
+    @IBOutlet weak var loginButton: PMPButton!    
+    @IBOutlet weak var userTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     var viewModel: LoginViewModel?
     
     override func viewDidLoad() {

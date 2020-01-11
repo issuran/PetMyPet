@@ -9,6 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="PetMyPet" customModuleProvider="target">
             <connections>
+                <outlet property="loginButton" destination="pkd-Qn-p8q" id="XC1-vt-x5v"/>
+                <outlet property="passwordTextField" destination="Ni8-y5-bow" id="DUe-Vm-9xd"/>
+                <outlet property="userTextField" destination="29n-mf-6nj" id="VNt-6b-QRu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -38,9 +41,27 @@
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkd-Qn-p8q">
-                    <rect key="frame" x="137" y="468" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkd-Qn-p8q" customClass="PMPButton" customModule="PetMyPet" customModuleProvider="target">
+                    <rect key="frame" x="16" y="450" width="288" height="48"/>
+                    <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="nJh-RF-vWS"/>
+                    </constraints>
+                    <state key="normal" title="Let's Pet">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="24"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="shouldBounce" value="YES"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -51,10 +72,12 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ni8-y5-bow" secondAttribute="trailing" constant="16" id="MU5-vY-Lni"/>
                 <constraint firstItem="29n-mf-6nj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="QHI-bD-5N7"/>
                 <constraint firstItem="29n-mf-6nj" firstAttribute="top" secondItem="1Bf-FX-t53" secondAttribute="bottom" constant="16" id="ROw-zD-HkB"/>
+                <constraint firstItem="pkd-Qn-p8q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="a4F-kJ-f0k"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="29n-mf-6nj" secondAttribute="trailing" constant="16" id="cTm-24-mbW"/>
                 <constraint firstItem="Ni8-y5-bow" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="q83-qu-lyo"/>
                 <constraint firstItem="Ni8-y5-bow" firstAttribute="top" secondItem="29n-mf-6nj" secondAttribute="bottom" constant="11.5" id="rnl-DM-6QK"/>
                 <constraint firstItem="1Bf-FX-t53" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uL4-sa-oR0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pkd-Qn-p8q" secondAttribute="trailing" constant="16" id="vUY-RB-Pvo"/>
                 <constraint firstItem="pkd-Qn-p8q" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wuL-Dn-9EJ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
