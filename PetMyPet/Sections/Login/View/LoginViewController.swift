@@ -37,13 +37,11 @@ class LoginViewController: UIViewController {
     func createGradientBackground() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.frame
-        let upColor = UIColor(displayP3Red: 225/255, green: 115/255, blue: 140/255, alpha: 1.0).cgColor
+        let upColor = UIColorUtils.darkPurpleColor?.cgColor ?? UIColor.white.cgColor
         
-        let middleColor = UIColor(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0).cgColor
+        let downColor = UIColorUtils.lightestPurpleColor?.cgColor ?? UIColor.white.cgColor
         
-        let downColor = UIColor(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0).cgColor
-        
-        gradientLayer.colors = [upColor, middleColor, downColor]
+        gradientLayer.colors = [upColor, downColor]
         /// To change gradient direction - vertical
 //        layer.startPoint = CGPoint(x: 0, y: 0)
 //        layer.endPoint = CGPoint(x: 1, y: 1)
