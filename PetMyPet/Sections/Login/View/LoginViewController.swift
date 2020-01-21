@@ -10,9 +10,10 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var loginButton: PMPButton!    
-    @IBOutlet weak var userTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: PMPButton!
+    
+    @IBOutlet weak var userTextField: PMPTextField!
+    @IBOutlet weak var passwordTextField: PMPTextField!
     
     var viewModel: LoginViewModel?
     
@@ -22,7 +23,7 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        createGradientBackground()
+//        createGradientBackground()
     }
     
     init(viewModel: LoginViewModel) {
@@ -37,9 +38,12 @@ class LoginViewController: UIViewController {
     func createGradientBackground() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.frame
-        let upColor = UIColorUtils.darkPurpleColor?.cgColor ?? UIColor.white.cgColor
+//        let upColor = UIColorUtils.darkPurpleColor?.cgColor ?? UIColor.white.cgColor
         
-        let downColor = UIColorUtils.lightestPurpleColor?.cgColor ?? UIColor.white.cgColor
+//        let downColor = UIColorUtils.lightestPurpleColor?.cgColor ?? UIColor.white.cgColor
+        
+        let upColor = UIColor(hex: "#E0D8E9FF")?.cgColor
+        let downColor = UIColor(hex: "#ECECECFF")?.cgColor
         
         gradientLayer.colors = [upColor, downColor]
         /// To change gradient direction - vertical

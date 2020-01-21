@@ -33,6 +33,7 @@
 		5233276C23C6B55B00ED014E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5233276A23C6B55B00ED014E /* LoginViewController.xib */; };
 		52DCEDCB23CEA8C000D5D659 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCEDCA23CEA8C000D5D659 /* UIColor+Utils.swift */; };
 		52EA85C023C959E3000AA80B /* PMPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA85BF23C959E3000AA80B /* PMPButton.swift */; };
+		52F609F023D699F3005BCA61 /* PMPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F609EF23D699F3005BCA61 /* PMPTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		5233276A23C6B55B00ED014E /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		52DCEDCA23CEA8C000D5D659 /* UIColor+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
 		52EA85BF23C959E3000AA80B /* PMPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMPButton.swift; sourceTree = "<group>"; };
+		52F609EF23D699F3005BCA61 /* PMPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMPTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				52EA85BF23C959E3000AA80B /* PMPButton.swift */,
+				52F609EF23D699F3005BCA61 /* PMPTextField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				5233276823C6B52300ED014E /* LoginViewModel.swift in Sources */,
 				5233276623C6B4EA00ED014E /* LoginCoordinatorDelegate.swift in Sources */,
 				52223ED423C3EE35004E9B4B /* SettingsCoordinatorDelegate.swift in Sources */,
+				52F609F023D699F3005BCA61 /* PMPTextField.swift in Sources */,
 				521DF7FC23BEB50000B275A9 /* HomeViewModel.swift in Sources */,
 				521DF7FA23BEB4C500B275A9 /* HomeCoordinatorDelegate.swift in Sources */,
 				52EA85C023C959E3000AA80B /* PMPButton.swift in Sources */,
