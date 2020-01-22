@@ -99,6 +99,9 @@
                             <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="performLogin:" destination="-1" eventType="touchUpInside" id="Wdf-ho-yCp"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.87450980392156863" green="0.45490196078431372" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -52,4 +52,9 @@ class LoginViewController: UIViewController {
 //        view.layer.addSublayer(layer)
         self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
+    
+    @IBAction func performLogin(_ sender: Any) {
+        viewModel?.callHome()
+    }
+    
 }

@@ -11,4 +11,8 @@ import Foundation
 class LoginViewModel {
     weak var delegate: LoginCoordinatorDelegate!
     
+    func callHome() {
+        delegate.callHome(self)
+    }
+    
 }
