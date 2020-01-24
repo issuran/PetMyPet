@@ -31,6 +31,14 @@ class AppCoordinator: Coordinator {
     
     func start() {
         loginCoordinator = LoginCoordinator(navigationController: navigationController)
+        loginCoordinator.delegate = self
         loginCoordinator.start()
+    }
+}
+
+extension AppCoordinator: LoginCoordinatorDelegate {
+    func callHome(_ viewModel: LoginViewModel) {
+        homeCoordinator = HomeCoordinator(navigationController: navigationController)
+        homeCoordinator.start()
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class LoginCoordinator: BaseCoordinator {
     var navigationController: UINavigationController
-    var delegate: LoginCoordinatorDelegate!
+    weak var delegate: LoginCoordinatorDelegate!
     
     required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -18,7 +18,7 @@ class LoginCoordinator: BaseCoordinator {
     
     func start() {
         let loginViewModel = LoginViewModel()
-        loginViewModel.delegate = delegate
+        loginViewModel.delegate = self
         let loginViewController = LoginViewController(viewModel: loginViewModel)
         navigationController.navigationBar.isHidden = true
         navigationController.setViewControllers([loginViewController], animated: true)
@@ -27,6 +27,6 @@ class LoginCoordinator: BaseCoordinator {
 
 extension LoginCoordinator: LoginCoordinatorDelegate {
     func callHome(_ viewModel: LoginViewModel) {
-        print("Test")
+        delegate.callHome(viewModel)
     }
 }
