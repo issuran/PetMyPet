@@ -17,24 +17,23 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rL-mt-r8E">
-                    <rect key="frame" x="32" y="192" width="350" height="512"/>
-                    <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rL-mt-r8E" customClass="SwipeableCardView" customModule="Pet_My_Pet" customModuleProvider="target">
+                    <rect key="frame" x="37" y="223" width="340" height="450"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <gestureRecognizers/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="512" id="GDD-x4-ZCy"/>
+                        <constraint firstAttribute="height" constant="450" id="add-5M-bLD"/>
+                        <constraint firstAttribute="width" constant="340" id="eaM-my-Y9y"/>
                     </constraints>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="xCm-ZB-IVM" appends="YES" id="feZ-82-moD"/>
                     </connections>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.87450980389999999" green="0.4549019608" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="5rL-mt-r8E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="5Hj-Zu-gCU"/>
                 <constraint firstItem="5rL-mt-r8E" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qYp-cm-fmq"/>
-                <constraint firstItem="5rL-mt-r8E" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="scU-rO-5ZN"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5rL-mt-r8E" secondAttribute="trailing" constant="32" id="xUJ-rq-ZeI"/>
+                <constraint firstItem="5rL-mt-r8E" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="wQ7-rp-feJ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="132" y="116"/>
