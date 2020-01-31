@@ -12,8 +12,22 @@ class HomeViewController: UIViewController {
     
     var viewModel: HomeViewModel?
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBAction func panView(_ sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: self.view)
 
+        if let viewToDrag = sender.view {
+            viewToDrag.center = CGPoint(x: viewToDrag.center.x + translation.x,
+                y: viewToDrag.center.y + translation.y)
+            sender.setTranslation(CGPoint(x: 0, y: 0), in: viewToDrag)
+        }
+        
+        if sender.state == .ended {
+            UIView.animate(withDuration: 0.2) {
+                sender.view?.center = self.view.center
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

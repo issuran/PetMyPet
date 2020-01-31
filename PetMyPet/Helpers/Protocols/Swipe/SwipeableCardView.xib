@@ -9,38 +9,37 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SwipeableCardView" customModule="Pet_My_Pet" customModuleProvider="target">
             <connections>
                 <outlet property="animalImageView" destination="op8-aS-bOi" id="0fh-og-xKS"/>
-                <outlet property="contentView" destination="7Hx-2E-YxB" id="tty-gM-BF6"/>
+                <outlet property="contentOfView" destination="7Hx-2E-YxB" id="abp-tz-HPn"/>
                 <outlet property="noImageView" destination="p5q-6e-HSk" id="AWV-MF-85V"/>
                 <outlet property="okImageView" destination="OZy-wm-3rf" id="7JF-ih-1nf"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" interfaceStyle="light" id="YIO-Vi-HNF">
-            <rect key="frame" x="0.0" y="0.0" width="350" height="383"/>
+            <rect key="frame" x="0.0" y="0.0" width="344" height="379"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Hx-2E-YxB">
-                    <rect key="frame" x="0.0" y="0.0" width="350" height="383"/>
+                    <rect key="frame" x="4" y="4" width="340" height="375"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="op8-aS-bOi">
-                            <rect key="frame" x="0.0" y="0.0" width="350" height="256"/>
+                            <rect key="frame" x="4" y="4" width="332" height="256"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="256" id="0eg-vV-ZF6"/>
-                                <constraint firstAttribute="width" constant="350" id="cIe-jA-Al2"/>
                             </constraints>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQQ-tr-QnF">
-                            <rect key="frame" x="0.0" y="256" width="350" height="128"/>
+                            <rect key="frame" x="4" y="260" width="332" height="111"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No" translatesAutoresizingMaskIntoConstraints="NO" id="p5q-6e-HSk">
-                                    <rect key="frame" x="25" y="29" width="70" height="70"/>
+                                    <rect key="frame" x="25" y="20.5" width="70" height="70"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="70" id="X3C-hD-hPM"/>
                                         <constraint firstAttribute="height" constant="70" id="lvG-7v-TVK"/>
                                     </constraints>
                                 </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yes" translatesAutoresizingMaskIntoConstraints="NO" id="OZy-wm-3rf">
-                                    <rect key="frame" x="255" y="29" width="70" height="70"/>
+                                    <rect key="frame" x="237" y="20.5" width="70" height="70"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="70" id="5Lv-W3-N4s"/>
                                         <constraint firstAttribute="height" constant="70" id="NhQ-TH-CZg"/>
@@ -51,7 +50,6 @@
                             <constraints>
                                 <constraint firstItem="p5q-6e-HSk" firstAttribute="leading" secondItem="EQQ-tr-QnF" secondAttribute="leading" constant="25" id="Zsb-c6-NsS"/>
                                 <constraint firstAttribute="trailing" secondItem="OZy-wm-3rf" secondAttribute="trailing" constant="25" id="b7y-MK-66o"/>
-                                <constraint firstAttribute="height" constant="128" id="dA8-9N-QDB"/>
                                 <constraint firstItem="OZy-wm-3rf" firstAttribute="centerY" secondItem="EQQ-tr-QnF" secondAttribute="centerY" id="v0N-Qy-jM6"/>
                                 <constraint firstItem="p5q-6e-HSk" firstAttribute="centerY" secondItem="EQQ-tr-QnF" secondAttribute="centerY" id="wzW-Mk-b6F"/>
                             </constraints>
@@ -59,24 +57,27 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstItem="EQQ-tr-QnF" firstAttribute="leading" secondItem="7Hx-2E-YxB" secondAttribute="leading" id="0eQ-Lk-rxu"/>
+                        <constraint firstItem="EQQ-tr-QnF" firstAttribute="leading" secondItem="7Hx-2E-YxB" secondAttribute="leading" constant="4" id="0eQ-Lk-rxu"/>
+                        <constraint firstAttribute="trailing" secondItem="op8-aS-bOi" secondAttribute="trailing" constant="4" id="6iO-GU-DgM"/>
                         <constraint firstItem="EQQ-tr-QnF" firstAttribute="top" secondItem="op8-aS-bOi" secondAttribute="bottom" id="B5G-rr-fwV"/>
-                        <constraint firstItem="op8-aS-bOi" firstAttribute="leading" secondItem="7Hx-2E-YxB" secondAttribute="leading" id="JG2-Kl-k8P"/>
-                        <constraint firstItem="EQQ-tr-QnF" firstAttribute="width" secondItem="op8-aS-bOi" secondAttribute="width" id="KoU-T9-k17"/>
-                        <constraint firstItem="op8-aS-bOi" firstAttribute="top" secondItem="7Hx-2E-YxB" secondAttribute="top" id="sao-Nx-1S3"/>
+                        <constraint firstAttribute="height" constant="375" id="Bnp-um-46M"/>
+                        <constraint firstItem="op8-aS-bOi" firstAttribute="leading" secondItem="7Hx-2E-YxB" secondAttribute="leading" constant="4" id="JG2-Kl-k8P"/>
+                        <constraint firstAttribute="bottom" secondItem="EQQ-tr-QnF" secondAttribute="bottom" constant="4" id="OJN-uW-sme"/>
+                        <constraint firstAttribute="trailing" secondItem="EQQ-tr-QnF" secondAttribute="trailing" constant="4" id="Ukn-eF-ijc"/>
+                        <constraint firstAttribute="width" constant="340" id="ZkQ-kS-Zg3"/>
+                        <constraint firstItem="op8-aS-bOi" firstAttribute="top" secondItem="7Hx-2E-YxB" secondAttribute="top" constant="4" id="sao-Nx-1S3"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="7Hx-2E-YxB" firstAttribute="top" secondItem="YIO-Vi-HNF" secondAttribute="top" id="3dF-Y0-6mK"/>
-                <constraint firstAttribute="trailing" secondItem="7Hx-2E-YxB" secondAttribute="trailing" id="Ed2-68-Y7r"/>
-                <constraint firstItem="7Hx-2E-YxB" firstAttribute="leading" secondItem="YIO-Vi-HNF" secondAttribute="leading" id="GEf-rI-wxB"/>
-                <constraint firstAttribute="bottom" secondItem="7Hx-2E-YxB" secondAttribute="bottom" id="R8h-0k-Bze"/>
+                <constraint firstItem="7Hx-2E-YxB" firstAttribute="leading" secondItem="YIO-Vi-HNF" secondAttribute="leading" constant="4" id="eGY-nK-7GW"/>
+                <constraint firstItem="7Hx-2E-YxB" firstAttribute="top" secondItem="YIO-Vi-HNF" secondAttribute="top" constant="4" id="nH5-dI-rll"/>
             </constraints>
+            <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="184.05797101449278" y="33.816964285714285"/>
+            <point key="canvasLocation" x="179.71014492753625" y="15.066964285714285"/>
         </view>
     </objects>
     <resources>

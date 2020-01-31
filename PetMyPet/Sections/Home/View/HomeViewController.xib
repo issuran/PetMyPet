@@ -7,9 +7,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="PetMyPet" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Pet_My_Pet" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="qwP-Wy-4Eq" id="56R-wb-1DW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,20 +17,31 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qwP-Wy-4Eq">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rL-mt-r8E" customClass="SwipeableCardView" customModule="Pet_My_Pet" customModuleProvider="target">
+                    <rect key="frame" x="37" y="223" width="340" height="450"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="450" id="add-5M-bLD"/>
+                        <constraint firstAttribute="width" constant="340" id="eaM-my-Y9y"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="xCm-ZB-IVM" appends="YES" id="feZ-82-moD"/>
+                    </connections>
+                </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.87450980389999999" green="0.4549019608" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qwP-Wy-4Eq" secondAttribute="trailing" id="1ca-XS-5gE"/>
-                <constraint firstItem="qwP-Wy-4Eq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="1fH-tr-8an"/>
-                <constraint firstItem="qwP-Wy-4Eq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ctf-UX-ykX"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qwP-Wy-4Eq" secondAttribute="bottom" id="ZSd-Rf-RVc"/>
+                <constraint firstItem="5rL-mt-r8E" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qYp-cm-fmq"/>
+                <constraint firstItem="5rL-mt-r8E" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="wQ7-rp-feJ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="132" y="116"/>
         </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="xCm-ZB-IVM">
+            <connections>
+                <action selector="panView:" destination="-1" id="oXT-Xy-Edf"/>
+            </connections>
+        </panGestureRecognizer>
     </objects>
 </document>
