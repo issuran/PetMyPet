@@ -11,14 +11,26 @@ import UIKit
 class HomeViewController: UIViewController {
     
     var viewModel: HomeViewModel?
+    @IBOutlet weak var swipeableCardView: SwipeableCardView!
     
     @IBAction func panView(_ sender: UIPanGestureRecognizer) {
-        let translation = sender.translation(in: self.view)
-
-        if let viewToDrag = sender.view {
-            viewToDrag.center = CGPoint(x: viewToDrag.center.x + translation.x,
-                y: viewToDrag.center.y + translation.y)
-            sender.setTranslation(CGPoint(x: 0, y: 0), in: viewToDrag)
+        let point = sender.translation(in: self.view)
+        
+        if let card = sender.view {
+            let xFromCenter = card.center.x - view.center.x
+            
+            card.center = CGPoint(x: card.center.x + point.x,
+                                  y: card.center.y + point.y)
+            
+            if xFromCenter > 0 {
+                swipeableCardView.feedbackImageView.image = #imageLiteral(resourceName: "Happy")
+                swipeableCardView.feedbackImageView.tintColor = .green
+            } else {
+                swipeableCardView.feedbackImageView.image = #imageLiteral(resourceName: "Sad")
+                swipeableCardView.feedbackImageView.tintColor = .red
+            }
+            
+            sender.setTranslation(CGPoint(x: 0, y: 0), in: card)
         }
         
         if sender.state == .ended {
