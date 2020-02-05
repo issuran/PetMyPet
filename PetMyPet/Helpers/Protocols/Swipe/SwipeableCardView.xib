@@ -10,6 +10,7 @@
             <connections>
                 <outlet property="animalImageView" destination="op8-aS-bOi" id="0fh-og-xKS"/>
                 <outlet property="contentOfView" destination="7Hx-2E-YxB" id="abp-tz-HPn"/>
+                <outlet property="feedbackImageView" destination="KMe-GU-nyt" id="wOk-gz-kdn"/>
                 <outlet property="noImageView" destination="p5q-6e-HSk" id="AWV-MF-85V"/>
                 <outlet property="okImageView" destination="OZy-wm-3rf" id="7JF-ih-1nf"/>
             </connections>
@@ -54,6 +55,11 @@
                                 <constraint firstItem="p5q-6e-HSk" firstAttribute="centerY" secondItem="EQQ-tr-QnF" secondAttribute="centerY" id="wzW-Mk-b6F"/>
                             </constraints>
                         </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" image="Happy" translatesAutoresizingMaskIntoConstraints="NO" id="KMe-GU-nyt">
+                            <rect key="frame" x="61" y="78" width="219" height="219"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
@@ -82,6 +88,7 @@
     </objects>
     <resources>
         <image name="AppLogo" width="512" height="512"/>
+        <image name="Happy" width="512" height="512"/>
         <image name="No" width="512" height="512"/>
         <image name="Yes" width="512" height="512"/>
     </resources>

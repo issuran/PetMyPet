@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Pet_My_Pet" customModuleProvider="target">
             <connections>
+                <outlet property="resetButton" destination="ahS-0K-a4I" id="MSj-qF-mox"/>
+                <outlet property="swipeableCardView" destination="5rL-mt-r8E" id="8wh-Ba-Rc8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,10 +31,38 @@
                         <outletCollection property="gestureRecognizers" destination="xCm-ZB-IVM" appends="YES" id="feZ-82-moD"/>
                     </connections>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahS-0K-a4I" customClass="PMPButton" customModule="Pet_My_Pet" customModuleProvider="target">
+                    <rect key="frame" x="50" y="54" width="314" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="qhk-aR-KVI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <state key="normal" title="Reset">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="24"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="shouldBounce" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="resetAction:" destination="-1" eventType="touchUpInside" id="6uG-wI-IVV"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.87450980389999999" green="0.4549019608" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="ahS-0K-a4I" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="nEO-vl-buc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ahS-0K-a4I" secondAttribute="trailing" constant="50" id="o36-gF-WaW"/>
                 <constraint firstItem="5rL-mt-r8E" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qYp-cm-fmq"/>
+                <constraint firstItem="ahS-0K-a4I" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="t1g-as-P2g"/>
                 <constraint firstItem="5rL-mt-r8E" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="wQ7-rp-feJ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

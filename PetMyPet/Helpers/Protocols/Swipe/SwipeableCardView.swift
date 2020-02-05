@@ -15,6 +15,8 @@ class SwipeableCardView: UIView {
     @IBOutlet weak var okImageView: UIImageView!
     @IBOutlet weak var noImageView: UIImageView!
     
+    @IBOutlet weak var feedbackImageView: UIImageView!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
