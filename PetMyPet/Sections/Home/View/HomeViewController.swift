@@ -25,8 +25,9 @@ class HomeViewController: UIViewController {
         card.center = CGPoint(x: card.center.x + point.x,
                               y: card.center.y + point.y)
         
-        
+        let scale = min(100 / abs(xFromCenter), 1)
         card.transform = CGAffineTransform(rotationAngle: xFromCenter / divisor)
+            .scaledBy(x: scale, y: scale)
         
         if xFromCenter > 0 {
             swipeableCardView.feedbackImageView.image = #imageLiteral(resourceName: "Happy")
@@ -62,6 +63,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // size of the screen / 2 to find middle value of the screen, then divide to the degrees expected to be the divisor for rotate based on the x from center
         divisor = (view.frame.width / 2) / 0.30
     }
     
