@@ -15,6 +15,8 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var resetButton: PMPButton!
     
+    var divisor: CGFloat!
+    
     @IBAction func panView(_ sender: UIPanGestureRecognizer) {
         let point = sender.translation(in: self.view)
         let card = sender.view!
@@ -22,6 +24,9 @@ class HomeViewController: UIViewController {
         
         card.center = CGPoint(x: card.center.x + point.x,
                               y: card.center.y + point.y)
+        
+        
+        card.transform = CGAffineTransform(rotationAngle: xFromCenter / divisor)
         
         if xFromCenter > 0 {
             swipeableCardView.feedbackImageView.image = #imageLiteral(resourceName: "Happy")
@@ -51,16 +56,13 @@ class HomeViewController: UIViewController {
                 return
             }
             
-//            UIView.animate(withDuration: 0.2) {
-//                sender.view?.center = self.view.center
-//                self.swipeableCardView.feedbackImageView.alpha = 0
-//            }
             resetCards()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        divisor = (view.frame.width / 2) / 0.30
     }
     
     init(viewModel: HomeViewModel) {
@@ -81,6 +83,7 @@ class HomeViewController: UIViewController {
             self.swipeableCardView.center = self.view.center
             self.swipeableCardView.feedbackImageView.alpha = 0
             self.swipeableCardView.alpha = 1
+            self.swipeableCardView.transform = .identity
         }
     }
     
