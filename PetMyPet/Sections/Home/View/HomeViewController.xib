@@ -19,6 +19,14 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dwn-wx-29f" customClass="SwipeableCardView" customModule="Pet_My_Pet" customModuleProvider="target">
+                    <rect key="frame" x="37" y="223" width="340" height="450"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="340" id="98M-C6-Prj"/>
+                        <constraint firstAttribute="height" constant="450" id="v44-o5-Wra"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rL-mt-r8E" customClass="SwipeableCardView" customModule="Pet_My_Pet" customModuleProvider="target">
                     <rect key="frame" x="37" y="223" width="340" height="450"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -59,6 +67,8 @@
             </subviews>
             <color key="backgroundColor" red="0.87450980389999999" green="0.4549019608" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="Dwn-wx-29f" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bEU-Od-MOH"/>
+                <constraint firstItem="Dwn-wx-29f" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="kXp-cj-lIa"/>
                 <constraint firstItem="ahS-0K-a4I" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="nEO-vl-buc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ahS-0K-a4I" secondAttribute="trailing" constant="50" id="o36-gF-WaW"/>
                 <constraint firstItem="5rL-mt-r8E" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qYp-cm-fmq"/>
