@@ -10,8 +10,10 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    var viewModel: HomeViewModel?
+    var viewModel: HomeViewModel!
     @IBOutlet weak var swipeableCardView: SwipeableCardView!
+    
+    @IBOutlet weak var nextSwipeableCardView: SwipeableCardView!
     
     @IBOutlet weak var resetButton: PMPButton!
     
@@ -88,5 +90,20 @@ class HomeViewController: UIViewController {
             self.swipeableCardView.transform = .identity
         }
     }
+}
+
+extension HomeViewController: SwipeableCardViewProtocol {
+    func numberOfCards() -> Int {
+        return viewModel.testArray.count
+    }
     
+    func card(forItemAtIndex index: Int) -> SwipeableCardView {
+        let card = SwipeableCardView()
+        card.animalImageView.image = #imageLiteral(resourceName: viewModel.testArray[index])
+        return card
+    }
+    
+    func emptyCards() -> UIView? {
+        return UIView()
+    }
 }

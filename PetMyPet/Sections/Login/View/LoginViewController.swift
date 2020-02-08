@@ -42,8 +42,8 @@ class LoginViewController: UIViewController {
         
 //        let downColor = UIColorUtils.lightestPurpleColor?.cgColor ?? UIColor.white.cgColor
         
-        let upColor = UIColor(hex: "#E0D8E9FF")?.cgColor
-        let downColor = UIColor(hex: "#ECECECFF")?.cgColor
+        let upColor = UIColor(hex: "#E0D8E9FF")?.cgColor ?? UIColor.white.cgColor
+        let downColor = UIColor(hex: "#ECECECFF")?.cgColor ?? UIColor.white.cgColor
         
         gradientLayer.colors = [upColor, downColor]
         /// To change gradient direction - vertical

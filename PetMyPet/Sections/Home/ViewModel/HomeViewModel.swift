@@ -11,4 +11,5 @@ import Foundation
 class HomeViewModel {
     weak var delegate: HomeCoordinatorDelegate!
     
+    let testArray: [String] = ["First", "Second", "Third"]
 }

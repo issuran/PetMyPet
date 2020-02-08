@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SwipeableCardViewProtocol: AnyObject {
-    func numberOfCards()
+    func numberOfCards() -> Int
     func card(forItemAtIndex index: Int) -> SwipeableCardView
     func emptyCards() -> UIView?
 }
