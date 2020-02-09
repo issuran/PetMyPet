@@ -15,9 +15,49 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var nextSwipeableCardView: SwipeableCardView!
     
+    @IBOutlet weak var emptyView: UIView!
+        
     @IBOutlet weak var resetButton: PMPButton!
     
     var divisor: CGFloat!
+    
+    var last = false
+    
+    func drawCurrentCard() {
+        if let image = viewModel.cardImage(forItemAtIndex: viewModel.current) {
+            swipeableCardView.animalImageView.image = image
+            viewModel.current += 1
+        }
+    }
+    
+    func drawNextCard() {
+        if let image = viewModel.cardImage(forItemAtIndex: viewModel.current) {
+            nextSwipeableCardView.animalImageView.image = image
+        } else {
+            last = true
+            nextSwipeableCardView.isHidden = true
+            emptyView.isHidden = false
+        }
+    }
+    
+    func swipedToNext() {
+        if !last {
+            self.swipeableCardView.isHidden = true
+            
+            UIView.animate(withDuration: 0.5, animations: {
+                self.swipeableCardView.transform = .identity
+                self.swipeableCardView.center = self.view.center
+                self.swipeableCardView.feedbackImageView.alpha = 0
+                self.swipeableCardView.alpha = 1
+            }) { _ in
+                self.swipeableCardView.isHidden = false
+                self.drawCurrentCard()
+                self.drawNextCard()
+            }
+        } else {
+            self.swipeableCardView.isHidden = true
+        }
+    }
     
     @IBAction func panView(_ sender: UIPanGestureRecognizer) {
         let point = sender.translation(in: self.view)
@@ -50,12 +90,14 @@ class HomeViewController: UIViewController {
                     card.center = CGPoint(x: card.center.x - 200, y: card.center.y + 75)
                     card.alpha = 0
                 }
+                swipedToNext()
                 return
             } else if card.center.x > (view.frame.width - 40) {
                 UIView.animate(withDuration: 0.3) {
                     card.center = CGPoint(x: card.center.x + 200, y: card.center.y + 75)
                     card.alpha = 0
                 }
+                swipedToNext()
                 return
             }
             
@@ -67,6 +109,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // size of the screen / 2 to find middle value of the screen, then divide to the degrees expected to be the divisor for rotate based on the x from center
         divisor = (view.frame.width / 2) / 0.30
+        drawCurrentCard()
+        drawNextCard()
     }
     
     init(viewModel: HomeViewModel) {
@@ -80,30 +124,21 @@ class HomeViewController: UIViewController {
     
     @IBAction func resetAction(_ sender: Any) {
         resetCards()
+        viewModel.current = 0
+        swipeableCardView.isHidden = false
+        nextSwipeableCardView.isHidden = false
+        last = false
+        
+        drawCurrentCard()
+        drawNextCard()
     }
     
     func resetCards() {
         UIView.animate(withDuration: 0.2) {
+            self.swipeableCardView.transform = .identity
             self.swipeableCardView.center = self.view.center
             self.swipeableCardView.feedbackImageView.alpha = 0
             self.swipeableCardView.alpha = 1
-            self.swipeableCardView.transform = .identity
         }
-    }
-}
-
-extension HomeViewController: SwipeableCardViewProtocol {
-    func numberOfCards() -> Int {
-        return viewModel.testArray.count
-    }
-    
-    func card(forItemAtIndex index: Int) -> SwipeableCardView {
-        let card = SwipeableCardView()
-        card.animalImageView.image = #imageLiteral(resourceName: viewModel.testArray[index])
-        return card
-    }
-    
-    func emptyCards() -> UIView? {
-        return UIView()
     }
 }
