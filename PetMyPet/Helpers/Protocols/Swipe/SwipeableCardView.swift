@@ -8,14 +8,22 @@
 
 import UIKit
 
+protocol CustomSwipeableButtonsProtocol {
+    func yesClicked(_: PMPButton)
+    func noClicked(_: PMPButton)
+}
+
 class SwipeableCardView: UIView {
     
     @IBOutlet weak var contentOfView: UIView!
     @IBOutlet weak var animalImageView: UIImageView!
-    @IBOutlet weak var okImageView: UIImageView!
-    @IBOutlet weak var noImageView: UIImageView!
+    
+    @IBOutlet weak var okButton: PMPButton!
+    @IBOutlet weak var noButton: PMPButton!
     
     @IBOutlet weak var feedbackImageView: UIImageView!
+    
+    var delegate: CustomSwipeableButtonsProtocol?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -47,5 +55,13 @@ class SwipeableCardView: UIView {
         self.contentOfView.layer.shadowRadius = 4.0
         self.contentOfView.layer.shadowOpacity = 0.7
         self.contentOfView.layer.masksToBounds = false
+    }
+    
+    @IBAction func noAction(_ sender: PMPButton) {
+        self.delegate?.noClicked(sender)
+    }
+    
+    @IBAction func yesAction(_ sender: PMPButton) {
+        self.delegate?.yesClicked(sender)
     }
 }

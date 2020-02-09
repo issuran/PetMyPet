@@ -11,8 +11,8 @@
                 <outlet property="animalImageView" destination="op8-aS-bOi" id="0fh-og-xKS"/>
                 <outlet property="contentOfView" destination="7Hx-2E-YxB" id="abp-tz-HPn"/>
                 <outlet property="feedbackImageView" destination="KMe-GU-nyt" id="wOk-gz-kdn"/>
-                <outlet property="noImageView" destination="p5q-6e-HSk" id="AWV-MF-85V"/>
-                <outlet property="okImageView" destination="OZy-wm-3rf" id="7JF-ih-1nf"/>
+                <outlet property="noButton" destination="ySF-vK-gaD" id="ktT-4K-NE7"/>
+                <outlet property="okButton" destination="dLU-9E-bOj" id="cJi-VM-jCS"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -35,35 +35,49 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPI-IH-tud">
                                     <rect key="frame" x="0.0" y="0.0" width="165.5" height="80"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No" translatesAutoresizingMaskIntoConstraints="NO" id="p5q-6e-HSk">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySF-vK-gaD" customClass="PMPButton" customModule="Pet_My_Pet" customModuleProvider="target">
                                             <rect key="frame" x="48" y="5" width="70" height="70"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="70" id="X3C-hD-hPM"/>
-                                                <constraint firstAttribute="height" constant="70" id="lvG-7v-TVK"/>
+                                                <constraint firstAttribute="width" constant="70" id="7DE-rc-6UB"/>
+                                                <constraint firstAttribute="height" constant="70" id="zCc-71-J9E"/>
                                             </constraints>
-                                        </imageView>
+                                            <state key="normal" image="No"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="shouldBounce" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="noAction:" destination="-1" eventType="touchUpInside" id="ekS-Dd-GXh"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstItem="p5q-6e-HSk" firstAttribute="centerY" secondItem="uPI-IH-tud" secondAttribute="centerY" id="UFV-nF-E0t"/>
-                                        <constraint firstItem="p5q-6e-HSk" firstAttribute="centerX" secondItem="uPI-IH-tud" secondAttribute="centerX" id="dx5-lC-ZYZ"/>
+                                        <constraint firstItem="ySF-vK-gaD" firstAttribute="centerX" secondItem="uPI-IH-tud" secondAttribute="centerX" id="7J3-BB-Ulf"/>
+                                        <constraint firstItem="ySF-vK-gaD" firstAttribute="centerY" secondItem="uPI-IH-tud" secondAttribute="centerY" id="ulO-TP-9TJ"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcq-pE-CyY">
                                     <rect key="frame" x="166.5" y="0.0" width="165.5" height="80"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yes" translatesAutoresizingMaskIntoConstraints="NO" id="OZy-wm-3rf">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLU-9E-bOj" customClass="PMPButton" customModule="Pet_My_Pet" customModuleProvider="target">
                                             <rect key="frame" x="48" y="5" width="70" height="70"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="70" id="5Lv-W3-N4s"/>
-                                                <constraint firstAttribute="height" constant="70" id="NhQ-TH-CZg"/>
+                                                <constraint firstAttribute="height" constant="70" id="PKk-4D-6Wr"/>
+                                                <constraint firstAttribute="width" constant="70" id="R3j-Tv-LSe"/>
                                             </constraints>
-                                        </imageView>
+                                            <state key="normal" image="Yes"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="shouldBounce" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="yesAction:" destination="-1" eventType="touchUpInside" id="DZF-pI-98u"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstItem="OZy-wm-3rf" firstAttribute="centerX" secondItem="wcq-pE-CyY" secondAttribute="centerX" id="5Yv-2F-ud5"/>
-                                        <constraint firstItem="OZy-wm-3rf" firstAttribute="centerY" secondItem="wcq-pE-CyY" secondAttribute="centerY" id="yLX-qR-CQm"/>
+                                        <constraint firstItem="dLU-9E-bOj" firstAttribute="centerX" secondItem="wcq-pE-CyY" secondAttribute="centerX" id="4Z4-KS-97Q"/>
+                                        <constraint firstItem="dLU-9E-bOj" firstAttribute="centerY" secondItem="wcq-pE-CyY" secondAttribute="centerY" id="cYy-k8-pGa"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8F0-no-97b">

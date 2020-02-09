@@ -111,6 +111,7 @@ class HomeViewController: UIViewController {
         divisor = (view.frame.width / 2) / 0.30
         drawCurrentCard()
         drawNextCard()
+        swipeableCardView.delegate = self
     }
     
     init(viewModel: HomeViewModel) {
@@ -139,6 +140,30 @@ class HomeViewController: UIViewController {
             self.swipeableCardView.center = self.view.center
             self.swipeableCardView.feedbackImageView.alpha = 0
             self.swipeableCardView.alpha = 1
+        }
+    }
+}
+
+extension HomeViewController: CustomSwipeableButtonsProtocol {
+    func yesClicked(_: PMPButton) {
+        UIView.animate(withDuration: 0.7, animations: {
+            self.swipeableCardView.feedbackImageView.alpha = 1
+            self.swipeableCardView.feedbackImageView.image = #imageLiteral(resourceName: "Happy")
+            self.swipeableCardView.feedbackImageView.tintColor = .green
+        }) { (_) in
+            self.swipeableCardView.feedbackImageView.alpha = 0
+            self.swipedToNext()
+        }
+    }
+    
+    func noClicked(_: PMPButton) {
+        UIView.animate(withDuration: 0.7, animations: {
+            self.swipeableCardView.feedbackImageView.alpha = 1
+            self.swipeableCardView.feedbackImageView.image = #imageLiteral(resourceName: "Sad")
+            self.swipeableCardView.feedbackImageView.tintColor = .red
+        }) { (_) in
+            self.swipeableCardView.feedbackImageView.alpha = 0
+            self.swipedToNext()
         }
     }
 }
