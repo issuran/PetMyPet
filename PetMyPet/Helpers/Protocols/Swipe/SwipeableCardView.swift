@@ -9,8 +9,8 @@
 import UIKit
 
 protocol CustomSwipeableButtonsProtocol {
-    func yesClicked(_: PMPButton)
-    func noClicked(_: PMPButton)
+    func yesClicked()
+    func noClicked()
 }
 
 class SwipeableCardView: UIView {
@@ -58,10 +58,10 @@ class SwipeableCardView: UIView {
     }
     
     @IBAction func noAction(_ sender: PMPButton) {
-        self.delegate?.noClicked(sender)
+        self.delegate?.noClicked()
     }
     
     @IBAction func yesAction(_ sender: PMPButton) {
-        self.delegate?.yesClicked(sender)
+        self.delegate?.yesClicked()
     }
 }
