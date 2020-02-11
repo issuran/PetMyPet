@@ -31,7 +31,6 @@
 		5233276823C6B52300ED014E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233276723C6B52300ED014E /* LoginViewModel.swift */; };
 		5233276B23C6B55B00ED014E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233276923C6B55B00ED014E /* LoginViewController.swift */; };
 		5233276C23C6B55B00ED014E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5233276A23C6B55B00ED014E /* LoginViewController.xib */; };
-		5254F03123DA75F200529AFE /* SwipeableCardViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5254F03023DA75F200529AFE /* SwipeableCardViewProtocol.swift */; };
 		5254F03323DA7D1700529AFE /* SwipeableCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5254F03223DA7D1700529AFE /* SwipeableCardView.swift */; };
 		5254F03523DA7E7000529AFE /* SwipeableCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5254F03423DA7E6F00529AFE /* SwipeableCardView.xib */; };
 		52DCEDCB23CEA8C000D5D659 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCEDCA23CEA8C000D5D659 /* UIColor+Utils.swift */; };
@@ -78,7 +77,6 @@
 		5233276723C6B52300ED014E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		5233276923C6B55B00ED014E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5233276A23C6B55B00ED014E /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		5254F03023DA75F200529AFE /* SwipeableCardViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableCardViewProtocol.swift; sourceTree = "<group>"; };
 		5254F03223DA7D1700529AFE /* SwipeableCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableCardView.swift; sourceTree = "<group>"; };
 		5254F03423DA7E6F00529AFE /* SwipeableCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwipeableCardView.xib; sourceTree = "<group>"; };
 		52DCEDCA23CEA8C000D5D659 /* UIColor+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
@@ -353,7 +351,6 @@
 		5254F02F23DA75CD00529AFE /* Swipe */ = {
 			isa = PBXGroup;
 			children = (
-				5254F03023DA75F200529AFE /* SwipeableCardViewProtocol.swift */,
 				5254F03223DA7D1700529AFE /* SwipeableCardView.swift */,
 				5254F03423DA7E6F00529AFE /* SwipeableCardView.xib */,
 			);
@@ -483,7 +480,6 @@
 				52F609F023D699F3005BCA61 /* PMPTextField.swift in Sources */,
 				521DF7FC23BEB50000B275A9 /* HomeViewModel.swift in Sources */,
 				521DF7FA23BEB4C500B275A9 /* HomeCoordinatorDelegate.swift in Sources */,
-				5254F03123DA75F200529AFE /* SwipeableCardViewProtocol.swift in Sources */,
 				52EA85C023C959E3000AA80B /* PMPButton.swift in Sources */,
 				52223ED223C3EE24004E9B4B /* SettingsCoordinator.swift in Sources */,
 				521DF7FF23BEB53E00B275A9 /* HomeViewController.swift in Sources */,
