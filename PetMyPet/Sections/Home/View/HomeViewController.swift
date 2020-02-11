@@ -17,17 +17,42 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var emptyView: UIView!
         
+    // Reset button for test purposes only
     @IBOutlet weak var resetButton: PMPButton!
         
     // Menu
     @IBOutlet weak var menuHideConstraint: NSLayoutConstraint!
     @IBOutlet weak var menuView: UIView!
-        
+    @IBOutlet weak var menuTableView: UITableView!
+            
     var divisor: CGFloat!
-    
     var last = false
-    
     var blurredEffectView: UIVisualEffectView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // size of the screen / 2 to find middle value of the screen, then divide to the degrees expected to be the divisor for rotate based on the x from center
+        divisor = (view.frame.width / 2) / 0.30
+        drawCurrentCard()
+        drawNextCard()
+        swipeableCardView.delegate = self
+        menuTableView.delegate = self
+        menuTableView.dataSource = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        menuView.isHidden = false
+    }
+    
+    init(viewModel: HomeViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     func drawCurrentCard() {
         if let image = viewModel.cardImage(forItemAtIndex: viewModel.current) {
@@ -111,29 +136,6 @@ class HomeViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // size of the screen / 2 to find middle value of the screen, then divide to the degrees expected to be the divisor for rotate based on the x from center
-        divisor = (view.frame.width / 2) / 0.30
-        drawCurrentCard()
-        drawNextCard()
-        swipeableCardView.delegate = self
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        menuView.isHidden = false
-    }
-    
-    init(viewModel: HomeViewModel) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
     @IBAction func resetAction(_ sender: Any) {
         resetCards()
         viewModel.current = 0
@@ -202,5 +204,20 @@ extension HomeViewController: CustomSwipeableButtonsProtocol {
             self.swipeableCardView.feedbackImageView.alpha = 0
             self.swipedToNext()
         }
+    }
+}
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+        cell.textLabel?.text = "Perfil"
+        cell.textLabel?.font = UIFont(name: "Futura", size: 24.0)
+        cell.textLabel?.textColor = .white
+        cell.backgroundColor = .clear
+        return cell
     }
 }

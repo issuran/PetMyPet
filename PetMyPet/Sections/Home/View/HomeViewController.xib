@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="emptyView" destination="5mP-0X-rgY" id="wBg-vk-Xsh"/>
                 <outlet property="menuHideConstraint" destination="ZZ1-ma-Rrl" id="fQH-ed-8O5"/>
+                <outlet property="menuTableView" destination="9YM-se-3px" id="nYX-l0-Sbo"/>
                 <outlet property="menuView" destination="0ym-n1-0FD" id="bYv-Ch-EXA"/>
                 <outlet property="nextSwipeableCardView" destination="Dwn-wx-29f" id="OWE-Oi-YzA"/>
                 <outlet property="resetButton" destination="ahS-0K-a4I" id="MSj-qF-mox"/>
@@ -136,28 +137,23 @@
                                 <constraint firstAttribute="height" constant="1" id="qUQ-ER-MMf"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7BC-zj-cup">
-                            <rect key="frame" x="8" y="51" width="234" height="40"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="jsP-FJ-JGV"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
-                            <state key="normal" title="Perfil">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </state>
-                        </button>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9YM-se-3px">
+                            <rect key="frame" x="4" y="51" width="238" height="801"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
                     </subviews>
                     <color key="backgroundColor" red="0.6164506744449193" green="0.93927758290761421" blue="0.92168089115084872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="7BC-zj-cup" firstAttribute="leading" secondItem="0ym-n1-0FD" secondAttribute="leading" constant="8" id="0y7-b3-T2j"/>
                         <constraint firstItem="mW8-SE-wg1" firstAttribute="top" secondItem="0ym-n1-0FD" secondAttribute="top" constant="8" id="Daa-h8-oID"/>
+                        <constraint firstItem="9YM-se-3px" firstAttribute="leading" secondItem="0ym-n1-0FD" secondAttribute="leading" constant="4" id="EQe-0h-dx3"/>
+                        <constraint firstAttribute="trailing" secondItem="9YM-se-3px" secondAttribute="trailing" constant="8" id="GSK-3D-tnT"/>
                         <constraint firstItem="uvQ-If-zkf" firstAttribute="leading" secondItem="0ym-n1-0FD" secondAttribute="leading" constant="8" id="KWh-30-nbk"/>
                         <constraint firstAttribute="trailing" secondItem="mW8-SE-wg1" secondAttribute="trailing" constant="20" symbolic="YES" id="aJq-n1-V7U"/>
-                        <constraint firstAttribute="trailing" secondItem="7BC-zj-cup" secondAttribute="trailing" constant="8" id="gFn-Km-w8B"/>
-                        <constraint firstItem="7BC-zj-cup" firstAttribute="top" secondItem="uvQ-If-zkf" secondAttribute="bottom" constant="4" id="lSP-ik-kfm"/>
                         <constraint firstItem="uvQ-If-zkf" firstAttribute="top" secondItem="mW8-SE-wg1" secondAttribute="bottom" constant="8" id="md4-np-2Ol"/>
+                        <constraint firstAttribute="bottom" secondItem="9YM-se-3px" secondAttribute="bottom" id="tld-cy-CCQ"/>
                         <constraint firstAttribute="width" constant="250" id="wTo-s9-RCn"/>
                         <constraint firstAttribute="trailing" secondItem="uvQ-If-zkf" secondAttribute="trailing" constant="8" id="yQF-bx-DBA"/>
+                        <constraint firstItem="9YM-se-3px" firstAttribute="top" secondItem="uvQ-If-zkf" secondAttribute="bottom" constant="4" id="ymJ-dE-t1o"/>
                     </constraints>
                 </view>
             </subviews>
