@@ -18,6 +18,12 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var emptyView: UIView!
         
     @IBOutlet weak var resetButton: PMPButton!
+        
+    // Menu
+    @IBOutlet weak var menuHideConstraint: NSLayoutConstraint!
+    
+    
+    
     
     var divisor: CGFloat!
     
@@ -134,6 +140,22 @@ class HomeViewController: UIViewController {
         drawNextCard()
     }
     
+    @IBAction func openMenu(_ sender: Any) {
+        menuHideConstraint.constant = 0
+        
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    @IBAction func closeMenu(_ sender: Any) {
+        menuHideConstraint.constant = -250
+        
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
     func resetCards() {
         UIView.animate(withDuration: 0.2) {
             self.swipeableCardView.transform = .identity
@@ -145,7 +167,7 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: CustomSwipeableButtonsProtocol {
-    func yesClicked(_: PMPButton) {
+    func yesClicked() {
         UIView.animate(withDuration: 0.7, animations: {
             self.swipeableCardView.feedbackImageView.alpha = 1
             self.swipeableCardView.feedbackImageView.image = #imageLiteral(resourceName: "Happy")
@@ -156,7 +178,7 @@ extension HomeViewController: CustomSwipeableButtonsProtocol {
         }
     }
     
-    func noClicked(_: PMPButton) {
+    func noClicked() {
         UIView.animate(withDuration: 0.7, animations: {
             self.swipeableCardView.feedbackImageView.alpha = 1
             self.swipeableCardView.feedbackImageView.image = #imageLiteral(resourceName: "Sad")
