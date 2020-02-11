@@ -27,6 +27,8 @@ class HomeViewController: UIViewController {
     
     var last = false
     
+    var blurredEffectView: UIVisualEffectView!
+    
     func drawCurrentCard() {
         if let image = viewModel.cardImage(forItemAtIndex: viewModel.current) {
             swipeableCardView.animalImageView.image = image
@@ -145,6 +147,13 @@ class HomeViewController: UIViewController {
     
     @IBAction func openMenu(_ sender: Any) {
         menuHideConstraint.constant = 0
+
+        swipeableCardView.isUserInteractionEnabled = false
+        
+        let blurEffect = UIBlurEffect(style: .light)
+        blurredEffectView = UIVisualEffectView(effect: blurEffect)
+        blurredEffectView.frame = swipeableCardView.bounds
+        swipeableCardView.addSubview(blurredEffectView)
         
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
@@ -153,6 +162,9 @@ class HomeViewController: UIViewController {
     
     @IBAction func closeMenu(_ sender: Any) {
         menuHideConstraint.constant = -250
+        
+        swipeableCardView.isUserInteractionEnabled = true
+        blurredEffectView.removeFromSuperview()
         
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
