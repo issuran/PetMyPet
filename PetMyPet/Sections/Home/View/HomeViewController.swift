@@ -21,10 +21,8 @@ class HomeViewController: UIViewController {
         
     // Menu
     @IBOutlet weak var menuHideConstraint: NSLayoutConstraint!
-    
-    
-    
-    
+    @IBOutlet weak var menuView: UIView!
+        
     var divisor: CGFloat!
     
     var last = false
@@ -118,6 +116,11 @@ class HomeViewController: UIViewController {
         drawCurrentCard()
         drawNextCard()
         swipeableCardView.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        menuView.isHidden = false
     }
     
     init(viewModel: HomeViewModel) {
