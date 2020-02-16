@@ -27,6 +27,6 @@ class HomeCoordinator: BaseCoordinator {
 
 extension HomeCoordinator: HomeCoordinatorDelegate {
     func callDetails(_ viewModel: HomeViewModel) {
-        print("Test")
+        delegate.callDetails(viewModel)
     }
 }
