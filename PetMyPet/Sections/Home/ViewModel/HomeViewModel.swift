@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum MenuOption: Int {
+    case perfil = 0
+}
+
 class HomeViewModel {
     weak var delegate: HomeCoordinatorDelegate!
     
@@ -34,5 +38,9 @@ class HomeViewModel {
         } else {
             return false
         }
+    }
+    
+    func callDetails() {
+        delegate.callDetails(self)
     }
 }

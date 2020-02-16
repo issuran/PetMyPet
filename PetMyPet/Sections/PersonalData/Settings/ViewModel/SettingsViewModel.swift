@@ -11,4 +11,7 @@ import Foundation
 class SettingsViewModel {
     weak var delegate: SettingsCoordinatorDelegate!
     
+    func callHome() {
+        delegate.callHome(self)
+    }
 }

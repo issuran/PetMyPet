@@ -220,4 +220,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.backgroundColor = .clear
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case MenuOption.perfil.rawValue:
+            viewModel.callDetails()
+        default:
+            print("Nothing to do here!")
+        }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }

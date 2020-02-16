@@ -20,7 +20,8 @@ class AppCoordinator: Coordinator {
     var homeCoordinator: HomeCoordinator!
     
     // Settings
-    var settingsCoordinator: SettingsCoordinator!
+    var settingsViewModel: SettingsViewModel!
+    var settingsViewController: SettingsViewController!
     
     required init(window: UIWindow) {
         self.window = window
@@ -39,6 +40,25 @@ class AppCoordinator: Coordinator {
 extension AppCoordinator: LoginCoordinatorDelegate {
     func callHome(_ viewModel: LoginViewModel) {
         homeCoordinator = HomeCoordinator(navigationController: navigationController)
+        homeCoordinator.delegate = self
         homeCoordinator.start()
+    }
+}
+
+extension AppCoordinator: HomeCoordinatorDelegate {
+    func callDetails(_ viewModel: HomeViewModel) {
+        settingsViewModel = SettingsViewModel()
+        settingsViewModel.delegate = self
+        settingsViewController = SettingsViewController(viewModel: settingsViewModel)
+        homeCoordinator.navigationController
+            .pushViewControllerFromLeft(controller: settingsViewController)
+    }
+}
+
+extension AppCoordinator: SettingsCoordinatorDelegate {
+    func callHome(_ viewModel: SettingsViewModel) {
+        settingsViewController = nil
+        settingsViewModel = nil
+        navigationController.popViewControllerToLeft()
     }
 }
