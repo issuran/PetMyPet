@@ -17,34 +17,57 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DkK-tW-yAA" customClass="PMPButton" customModule="Pet_My_Pet" customModuleProvider="target">
-                    <rect key="frame" x="57" y="424" width="300" height="48"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DkK-tW-yAA" customClass="PMPButton" customModule="Pet_My_Pet" customModuleProvider="target">
+                    <rect key="frame" x="364" y="54.5" width="30" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="300" id="FWq-yy-Jf8"/>
-                        <constraint firstAttribute="height" constant="48" id="S9X-jD-eMk"/>
+                        <constraint firstAttribute="width" constant="30" id="FWq-yy-Jf8"/>
+                        <constraint firstAttribute="height" constant="30" id="S9X-jD-eMk"/>
                     </constraints>
-                    <state key="normal" title="Back"/>
+                    <state key="normal" image="Back_Right"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="shouldBounce" value="YES"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="24"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                            <real key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="backToHome:" destination="-1" eventType="touchUpInside" id="16U-Wl-BLy"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzA-u9-GIZ">
+                    <rect key="frame" x="299" y="52" width="50" height="35"/>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                    <state key="normal" title="Salvar">
+                        <color key="titleColor" red="0.23921568630000001" green="0.61568627450000002" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C36-pw-F6d">
+                    <rect key="frame" x="20" y="52" width="70" height="35"/>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                    <state key="normal" title="Cancelar">
+                        <color key="titleColor" red="0.23921568630000001" green="0.61568627450000002" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="TJX-ct-7xw">
+                    <rect key="frame" x="0.0" y="107" width="414" height="755"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.61568627450000002" green="0.94117647059999998" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="DkK-tW-yAA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="WRP-5p-e1V"/>
-                <constraint firstItem="DkK-tW-yAA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aZG-C2-r73"/>
+                <constraint firstItem="TJX-ct-7xw" firstAttribute="top" secondItem="C36-pw-F6d" secondAttribute="bottom" constant="20" id="1ET-fS-76r"/>
+                <constraint firstItem="rzA-u9-GIZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="1iX-XU-Ggu"/>
+                <constraint firstItem="DkK-tW-yAA" firstAttribute="centerY" secondItem="rzA-u9-GIZ" secondAttribute="centerY" id="1rC-eC-zPa"/>
+                <constraint firstItem="C36-pw-F6d" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="3Lo-90-KZX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TJX-ct-7xw" secondAttribute="trailing" id="OZk-pD-eQj"/>
+                <constraint firstItem="DkK-tW-yAA" firstAttribute="leading" secondItem="rzA-u9-GIZ" secondAttribute="trailing" constant="15" id="T3I-V3-hZi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DkK-tW-yAA" secondAttribute="trailing" constant="20" id="Wsl-1G-8Wa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="TJX-ct-7xw" secondAttribute="bottom" id="q1f-Ab-qcG"/>
+                <constraint firstItem="TJX-ct-7xw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uPg-7h-2rN"/>
+                <constraint firstItem="C36-pw-F6d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="zDw-1j-t6T"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="106"/>
         </view>
     </objects>
+    <resources>
+        <image name="Back_Right" width="512" height="512"/>
+    </resources>
 </document>
