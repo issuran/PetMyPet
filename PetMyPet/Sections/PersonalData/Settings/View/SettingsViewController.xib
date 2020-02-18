@@ -9,6 +9,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="Pet_My_Pet" customModuleProvider="target">
             <connections>
+                <outlet property="cancelButton" destination="C36-pw-F6d" id="7fN-7d-HCS"/>
+                <outlet property="imgViewFirst" destination="hMZ-Zr-gXz" id="X67-Uw-EdM"/>
+                <outlet property="imgViewSecond" destination="vhH-YD-cPU" id="0NP-iR-YvP"/>
+                <outlet property="imgViewThird" destination="zdf-Xe-oVY" id="anG-yO-QEQ"/>
+                <outlet property="saveButton" destination="rzA-u9-GIZ" id="bhm-LT-WxA"/>
+                <outlet property="tableView" destination="TJX-ct-7xw" id="X1T-2v-bA1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -37,6 +43,9 @@
                     <state key="normal" title="Salvar">
                         <color key="titleColor" red="0.23921568630000001" green="0.61568627450000002" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="saveButton:" destination="-1" eventType="touchUpInside" id="vfO-SL-pBO"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C36-pw-F6d">
                     <rect key="frame" x="20" y="52" width="70" height="35"/>
@@ -44,6 +53,9 @@
                     <state key="normal" title="Cancelar">
                         <color key="titleColor" red="0.23921568630000001" green="0.61568627450000002" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="cancelButton:" destination="-1" eventType="touchUpInside" id="qVV-I3-ASo"/>
+                    </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="TJX-ct-7xw">
                     <rect key="frame" x="0.0" y="366" width="414" height="496"/>
