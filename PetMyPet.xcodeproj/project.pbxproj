@@ -104,6 +104,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		520F7DF923FB32FB00A2F70A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		521DF7B923BEA47900B275A9 = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +276,7 @@
 		52223ECE23C3EDE5004E9B4B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				520F7DF923FB32FB00A2F70A /* Cells */,
 				52223ED723C3EED9004E9B4B /* SettingsViewController.swift */,
 				52223ED823C3EED9004E9B4B /* SettingsViewController.xib */,
 			);

@@ -142,7 +142,7 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
                     </subviews>
-                    <color key="backgroundColor" red="0.6164506744449193" green="0.93927758290761421" blue="0.92168089115084872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.61568627450980395" green="0.94117647058823528" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="mW8-SE-wg1" firstAttribute="top" secondItem="0ym-n1-0FD" secondAttribute="topMargin" id="Daa-h8-oID"/>
                         <constraint firstItem="9YM-se-3px" firstAttribute="leading" secondItem="0ym-n1-0FD" secondAttribute="leading" constant="4" id="EQe-0h-dx3"/>
