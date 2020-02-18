@@ -1,4 +1,4 @@
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg) [![MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT) 
+[![Build Status](https://travis-ci.org/issuran/PetMyPet.svg?branch=master)](https://travis-ci.org/issuran/PetMyPet) [![MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT) 
 ![XCode](https://img.shields.io/badge/XCode-11.3-inactive.svg) ![Language](https://img.shields.io/badge/Language-Swift5.1-inactive.svg) ![Platform](https://img.shields.io/badge/Platform-iOS-inactive.svg) 
 
 # Pet My Pet
