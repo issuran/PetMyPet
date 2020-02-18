@@ -41,17 +41,17 @@
                     <rect key="frame" x="299" y="52" width="50" height="35"/>
                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                     <state key="normal" title="Salvar">
-                        <color key="titleColor" red="0.23921568630000001" green="0.61568627450000002" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
                         <action selector="saveButton:" destination="-1" eventType="touchUpInside" id="vfO-SL-pBO"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C36-pw-F6d">
-                    <rect key="frame" x="20" y="52" width="70" height="35"/>
+                    <rect key="frame" x="22" y="52" width="70" height="35"/>
                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                     <state key="normal" title="Cancelar">
-                        <color key="titleColor" red="0.23921568630000001" green="0.61568627450000002" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
                         <action selector="cancelButton:" destination="-1" eventType="touchUpInside" id="qVV-I3-ASo"/>
@@ -137,7 +137,7 @@
                 <constraint firstItem="TJX-ct-7xw" firstAttribute="top" secondItem="vAm-w0-AyE" secondAttribute="bottom" constant="15" id="dpf-Cq-k2r"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="TJX-ct-7xw" secondAttribute="bottom" id="q1f-Ab-qcG"/>
                 <constraint firstItem="TJX-ct-7xw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uPg-7h-2rN"/>
-                <constraint firstItem="C36-pw-F6d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="zDw-1j-t6T"/>
+                <constraint firstItem="C36-pw-F6d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="22" id="zDw-1j-t6T"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
