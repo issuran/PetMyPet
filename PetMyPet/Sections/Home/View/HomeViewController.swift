@@ -205,28 +205,44 @@ extension HomeViewController: CustomSwipeableButtonsProtocol {
             self.swipedToNext()
         }
     }
+    
+    func configCell(_ indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+        
+        switch indexPath.row {
+        case MenuOption.perfil.rawValue:
+            cell.textLabel?.text = "Perfil"
+        case MenuOption.sair.rawValue:
+            cell.textLabel?.text = "Sair"
+        default:
+            debugPrint("Nothing to do!")
+        }
+        
+        cell.textLabel?.font = UIFont(name: "Futura", size: 24.0)
+        cell.textLabel?.textColor = .white
+        cell.backgroundColor = .clear
+        
+        return cell
+    }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = "Perfil"
-        cell.textLabel?.font = UIFont(name: "Futura", size: 24.0)
-        cell.textLabel?.textColor = .white
-        cell.backgroundColor = .clear
-        return cell
+        return configCell(indexPath)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case MenuOption.perfil.rawValue:
             viewModel.callDetails()
+        case MenuOption.sair.rawValue:
+            viewModel.callLogout()
         default:
-            print("Nothing to do here!")
+            debugPrint("Nothing to do!")
         }
         
         tableView.deselectRow(at: indexPath, animated: true)

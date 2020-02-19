@@ -10,6 +10,7 @@ import UIKit
 
 enum MenuOption: Int {
     case perfil = 0
+    case sair = 1
 }
 
 class HomeViewModel {
@@ -42,5 +43,9 @@ class HomeViewModel {
     
     func callDetails() {
         delegate.callDetails(self)
+    }
+    
+    func callLogout() {
+        delegate.callLogout(self)
     }
 }

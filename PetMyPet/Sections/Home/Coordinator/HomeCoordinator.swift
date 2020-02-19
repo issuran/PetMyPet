@@ -29,4 +29,8 @@ extension HomeCoordinator: HomeCoordinatorDelegate {
     func callDetails(_ viewModel: HomeViewModel) {
         delegate.callDetails(viewModel)
     }
+    
+    func callLogout(_ viewModel: HomeViewModel) {
+        delegate.callLogout(viewModel)
+    }
 }

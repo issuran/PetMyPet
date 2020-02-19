@@ -39,6 +39,7 @@ class AppCoordinator: Coordinator {
 
 extension AppCoordinator: LoginCoordinatorDelegate {
     func callHome(_ viewModel: LoginViewModel) {
+        loginCoordinator = nil
         homeCoordinator = HomeCoordinator(navigationController: navigationController)
         homeCoordinator.delegate = self
         homeCoordinator.start()
@@ -52,6 +53,11 @@ extension AppCoordinator: HomeCoordinatorDelegate {
         settingsViewController = SettingsViewController(viewModel: settingsViewModel)
         homeCoordinator.navigationController
             .pushViewControllerFromLeft(controller: settingsViewController)
+    }
+    
+    func callLogout(_ viewModel: HomeViewModel) {
+        homeCoordinator = nil
+        self.start()
     }
 }
 
