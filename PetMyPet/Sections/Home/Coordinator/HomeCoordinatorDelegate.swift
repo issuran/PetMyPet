@@ -10,4 +10,5 @@ import Foundation
 
 protocol HomeCoordinatorDelegate: AnyObject {
     func callDetails(_ viewModel: HomeViewModel)
+    func callLogout(_ viewModel: HomeViewModel)
 }
