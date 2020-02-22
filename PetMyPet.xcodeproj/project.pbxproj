@@ -35,6 +35,8 @@
 		5254F03523DA7E7000529AFE /* SwipeableCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5254F03423DA7E6F00529AFE /* SwipeableCardView.xib */; };
 		52D757B323F8E8C200DA4589 /* NavigationViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D757B223F8E8C200DA4589 /* NavigationViewController+Extension.swift */; };
 		52DCEDCB23CEA8C000D5D659 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCEDCA23CEA8C000D5D659 /* UIColor+Utils.swift */; };
+		52DD3E7B23FF7B0200BF443F /* SettingsImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD3E7923FF7B0200BF443F /* SettingsImageCell.swift */; };
+		52DD3E7C23FF7B0200BF443F /* SettingsImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52DD3E7A23FF7B0200BF443F /* SettingsImageCell.xib */; };
 		52EA85C023C959E3000AA80B /* PMPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA85BF23C959E3000AA80B /* PMPButton.swift */; };
 		52F609F023D699F3005BCA61 /* PMPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F609EF23D699F3005BCA61 /* PMPTextField.swift */; };
 /* End PBXBuildFile section */
@@ -82,6 +84,8 @@
 		5254F03423DA7E6F00529AFE /* SwipeableCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwipeableCardView.xib; sourceTree = "<group>"; };
 		52D757B223F8E8C200DA4589 /* NavigationViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationViewController+Extension.swift"; sourceTree = "<group>"; };
 		52DCEDCA23CEA8C000D5D659 /* UIColor+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
+		52DD3E7923FF7B0200BF443F /* SettingsImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsImageCell.swift; sourceTree = "<group>"; };
+		52DD3E7A23FF7B0200BF443F /* SettingsImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsImageCell.xib; sourceTree = "<group>"; };
 		52EA85BF23C959E3000AA80B /* PMPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMPButton.swift; sourceTree = "<group>"; };
 		52F609EF23D699F3005BCA61 /* PMPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMPTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +111,8 @@
 		520F7DF923FB32FB00A2F70A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				52DD3E7923FF7B0200BF443F /* SettingsImageCell.swift */,
+				52DD3E7A23FF7B0200BF443F /* SettingsImageCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -459,6 +465,7 @@
 			files = (
 				521DF7D223BEA47B00B275A9 /* LaunchScreen.storyboard in Resources */,
 				521DF7CF23BEA47B00B275A9 /* Preview Assets.xcassets in Resources */,
+				52DD3E7C23FF7B0200BF443F /* SettingsImageCell.xib in Resources */,
 				5233276C23C6B55B00ED014E /* LoginViewController.xib in Resources */,
 				5254F03523DA7E7000529AFE /* SwipeableCardView.xib in Resources */,
 				521DF7CC23BEA47B00B275A9 /* Assets.xcassets in Resources */,
@@ -501,6 +508,7 @@
 				5233276B23C6B55B00ED014E /* LoginViewController.swift in Sources */,
 				52223ED923C3EED9004E9B4B /* SettingsViewController.swift in Sources */,
 				521DF7F823BEB3E700B275A9 /* HomeCoordinator.swift in Sources */,
+				52DD3E7B23FF7B0200BF443F /* SettingsImageCell.swift in Sources */,
 				52223ED623C3EEBC004E9B4B /* SettingsViewModel.swift in Sources */,
 				52DCEDCB23CEA8C000D5D659 /* UIColor+Utils.swift in Sources */,
 			);
