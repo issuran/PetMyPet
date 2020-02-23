@@ -25,6 +25,8 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.register(SettingsImageCell.self, forCellReuseIdentifier: "SettingsImageCell")
     }
     
     init(viewModel: SettingsViewModel) {
@@ -57,6 +59,11 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0 {
+            let ce = tableView.dequeueReusableCell(withIdentifier: "SettingsImageCell")!
+            return ce
+        }
+        
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
         cell.textLabel?.text = "Teste"
         return cell
