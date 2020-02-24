@@ -19,37 +19,48 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSO-9W-ELQ">
                         <rect key="frame" x="0.0" y="0.0" width="359" height="244"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLQ-lJ-7FP">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLQ-lJ-7FP" customClass="PMPButton" customModule="Pet_My_Pet" customModuleProvider="target">
                                 <rect key="frame" x="241" y="126" width="110" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="4sK-R3-jnT"/>
                                     <constraint firstAttribute="height" constant="110" id="Kdg-JP-cJw"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="Plus"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldBounce" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqK-1b-z50">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqK-1b-z50" customClass="PMPButton" customModule="Pet_My_Pet" customModuleProvider="target">
                                 <rect key="frame" x="241" y="8" width="110" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="V1W-Q1-9D4"/>
                                     <constraint firstAttribute="height" constant="110" id="oKh-h0-9pi"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="Plus"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldBounce" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKu-8N-dLq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKu-8N-dLq" customClass="PMPButton" customModule="Pet_My_Pet" customModuleProvider="target">
                                 <rect key="frame" x="8" y="8" width="225" height="225"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="225" id="J03-iv-Omr"/>
                                     <constraint firstAttribute="height" constant="225" id="V7b-Fo-fiV"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="Plus"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldBounce" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="aqK-1b-z50" firstAttribute="top" secondItem="QSO-9W-ELQ" secondAttribute="top" constant="8" id="0Pd-bX-seS"/>
                             <constraint firstAttribute="bottom" secondItem="bLQ-lJ-7FP" secondAttribute="bottom" constant="8" id="9zN-wE-lX6"/>
+                            <constraint firstAttribute="height" constant="244" id="ASD-Ze-LWB"/>
                             <constraint firstItem="bLQ-lJ-7FP" firstAttribute="top" secondItem="aqK-1b-z50" secondAttribute="bottom" constant="8" id="JXw-dG-5JH"/>
                             <constraint firstItem="iKu-8N-dLq" firstAttribute="leading" secondItem="QSO-9W-ELQ" secondAttribute="leading" constant="8" id="Zyb-rg-wqr"/>
+                            <constraint firstAttribute="width" constant="359" id="avr-Fm-pKY"/>
                             <constraint firstItem="bLQ-lJ-7FP" firstAttribute="leading" secondItem="iKu-8N-dLq" secondAttribute="trailing" constant="8" id="ihM-xp-sOi"/>
                             <constraint firstItem="iKu-8N-dLq" firstAttribute="top" secondItem="QSO-9W-ELQ" secondAttribute="top" constant="8" id="t5W-Wc-o2u"/>
                             <constraint firstAttribute="trailing" secondItem="aqK-1b-z50" secondAttribute="trailing" constant="8" id="utU-Tx-ZAW"/>
@@ -66,4 +77,7 @@
             <point key="canvasLocation" x="110.14492753623189" y="53.571428571428569"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Plus" width="512" height="512"/>
+    </resources>
 </document>
