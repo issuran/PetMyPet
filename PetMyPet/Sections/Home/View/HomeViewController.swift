@@ -11,15 +11,14 @@ import UIKit
 class HomeViewController: UIViewController {
     
     var viewModel: HomeViewModel!
+    
     @IBOutlet weak var swipeableCardView: SwipeableCardView!
-    
     @IBOutlet weak var nextSwipeableCardView: SwipeableCardView!
-    
     @IBOutlet weak var emptyView: UIView!
         
     // Reset button for test purposes only
     @IBOutlet weak var resetButton: PMPButton!
-        
+    
     // Menu
     @IBOutlet weak var menuHideConstraint: NSLayoutConstraint!
     @IBOutlet weak var menuView: UIView!

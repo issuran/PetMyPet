@@ -65,9 +65,11 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let ce = tableView.dequeueReusableCell(withIdentifier: "SettingsImageCell") as? SettingsImageCell
-            ce?.imgOne.imageView?.image = #imageLiteral(resourceName: "AppLogo")
-            return ce!
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsImageCell") as? SettingsImageCell
+            cell?.imgOne.imageView?.image = #imageLiteral(resourceName: "AppLogo")
+            cell?.imgTwo.imageView?.image = #imageLiteral(resourceName: "Happy")
+            cell?.imgThree.imageView?.image = #imageLiteral(resourceName: "First")
+            return cell!
         }
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
         cell.textLabel?.text = "Teste"
