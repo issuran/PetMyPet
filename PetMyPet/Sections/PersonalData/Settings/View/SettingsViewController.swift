@@ -26,7 +26,12 @@ class SettingsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.register(SettingsImageCell.self, forCellReuseIdentifier: "SettingsImageCell")
+//        tableView.register(SettingsImageCell.self, forCellReuseIdentifier: "SettingsImageCell")
+        tableView.register(UINib(nibName: "SettingsImageCell", bundle: nil), forCellReuseIdentifier: "SettingsImageCell")
+        
+        self.tableView.rowHeight = UITableView.automaticDimension;
+        self.tableView.estimatedRowHeight = 44.0; // set to whatever your "average" cell height is
+
     }
     
     init(viewModel: SettingsViewModel) {
@@ -59,17 +64,21 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            let ce = tableView.dequeueReusableCell(withIdentifier: "SettingsImageCell")!
-            return ce
+        if indexPath.section == 0 {
+            let ce = tableView.dequeueReusableCell(withIdentifier: "SettingsImageCell") as? SettingsImageCell
+            ce?.imgOne.imageView?.image = #imageLiteral(resourceName: "AppLogo")
+            return ce!
         }
-        
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
         cell.textLabel?.text = "Teste"
         return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Header"
+        return section == 0 ? "" : "Header"
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return indexPath.section == 0 ? 244.0 : UITableView.automaticDimension
     }
 }

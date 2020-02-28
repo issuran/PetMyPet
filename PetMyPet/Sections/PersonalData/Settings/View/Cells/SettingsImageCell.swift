@@ -9,16 +9,18 @@
 import UIKit
 
 class SettingsImageCell: UITableViewCell {
+    
+    @IBOutlet weak var viewContainer: UIView!
+    @IBOutlet weak var imgOne: PMPButton!
+    @IBOutlet weak var imgTwo: PMPButton!
+    @IBOutlet weak var imgThree: PMPButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }
