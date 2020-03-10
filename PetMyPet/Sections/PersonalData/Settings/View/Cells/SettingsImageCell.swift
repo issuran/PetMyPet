@@ -23,4 +23,16 @@ class SettingsImageCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    @IBAction func chooseFirstImageAction(_ sender: Any) {
+        print("Choose First")
+    }
+    
+    @IBAction func chooseSecondImageAction(_ sender: Any) {
+        print("Choose Second")
+    }
+    
+    @IBAction func chooseThirdImageAction(_ sender: Any) {
+        print("Choose Third")
+    }
+    
 }
