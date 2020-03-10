@@ -29,6 +29,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shouldBounce" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="chooseThirdImageAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="btP-un-8gU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqK-1b-z50" customClass="PMPButton" customModule="Pet_My_Pet" customModuleProvider="target">
                                 <rect key="frame" x="241" y="8" width="110" height="110"/>
@@ -40,6 +43,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shouldBounce" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="chooseSecondImageAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uex-FP-PP7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKu-8N-dLq" customClass="PMPButton" customModule="Pet_My_Pet" customModuleProvider="target">
                                 <rect key="frame" x="8" y="8" width="225" height="225"/>
@@ -51,6 +57,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shouldBounce" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="chooseFirstImageAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="A0q-YN-uM8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
