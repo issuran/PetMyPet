@@ -70,13 +70,9 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         }
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsTextFieldCell") as? SettingsTextFieldCell
+            cell?.textField.labelPlaceholderTitle.text = viewModel?.settingsTitle[indexPath.section]
             return cell!
         }
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        tableView.tintColor = .white
-        return viewModel?.settingsTitle[section]
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
