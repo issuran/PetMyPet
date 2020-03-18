@@ -75,7 +75,7 @@ class SettingsImageCell: UITableViewCell, UIImagePickerControllerDelegate, UINav
         if (UIImagePickerController .isSourceTypeAvailable(.photoLibrary)) {
             imagePicker.sourceType = .photoLibrary
             imagePicker.delegate = self
-            imagePicker.allowsEditing = true
+            imagePicker.allowsEditing = false
             self.parentViewController?.present(imagePicker, animated: true, completion: nil)
         } else {
             let alert = UIAlertController(title: "Aviso", message: "Você não possui acesso a galeria.", preferredStyle: .alert)
@@ -87,6 +87,7 @@ class SettingsImageCell: UITableViewCell, UIImagePickerControllerDelegate, UINav
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[.originalImage] as? UIImage {
             self.tempButton.setImage(pickedImage, for: .normal)
+            self.imgOne.contentMode = .scaleAspectFit
         }
         picker.dismiss(animated: true, completion: nil)
     }

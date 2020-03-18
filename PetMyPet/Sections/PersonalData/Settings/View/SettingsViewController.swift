@@ -26,8 +26,8 @@ class SettingsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-//        tableView.register(SettingsImageCell.self, forCellReuseIdentifier: "SettingsImageCell")
         tableView.register(UINib(nibName: "SettingsImageCell", bundle: nil), forCellReuseIdentifier: "SettingsImageCell")
+        tableView.register(UINib(nibName: "SettingsTextFieldCell", bundle: nil), forCellReuseIdentifier: "SettingsTextFieldCell")
         
         self.tableView.rowHeight = UITableView.automaticDimension;
         self.tableView.estimatedRowHeight = 44.0; // set to whatever your "average" cell height is
@@ -68,12 +68,14 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsImageCell") as? SettingsImageCell
             return cell!
         }
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = "Teste"
-        return cell
+        else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsTextFieldCell") as? SettingsTextFieldCell
+            return cell!
+        }
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        tableView.tintColor = .white
         return viewModel?.settingsTitle[section]
     }
     
