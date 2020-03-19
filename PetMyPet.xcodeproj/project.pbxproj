@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5212E3C42421B10B008AB9D0 /* SettingsTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5212E3C22421B10B008AB9D0 /* SettingsTextFieldCell.swift */; };
+		5212E3C52421B10B008AB9D0 /* SettingsTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5212E3C32421B10B008AB9D0 /* SettingsTextFieldCell.xib */; };
 		521DF7C623BEA47A00B275A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DF7C523BEA47A00B275A9 /* AppDelegate.swift */; };
 		521DF7C823BEA47A00B275A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DF7C723BEA47A00B275A9 /* SceneDelegate.swift */; };
 		521DF7CC23BEA47B00B275A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 521DF7CB23BEA47B00B275A9 /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5212E3C22421B10B008AB9D0 /* SettingsTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTextFieldCell.swift; sourceTree = "<group>"; };
+		5212E3C32421B10B008AB9D0 /* SettingsTextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTextFieldCell.xib; sourceTree = "<group>"; };
 		521DF7C223BEA47A00B275A9 /* Pet My Pet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pet My Pet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		521DF7C523BEA47A00B275A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		521DF7C723BEA47A00B275A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 			children = (
 				52DD3E7923FF7B0200BF443F /* SettingsImageCell.swift */,
 				52DD3E7A23FF7B0200BF443F /* SettingsImageCell.xib */,
+				5212E3C22421B10B008AB9D0 /* SettingsTextFieldCell.swift */,
+				5212E3C32421B10B008AB9D0 /* SettingsTextFieldCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -470,6 +476,7 @@
 				5254F03523DA7E7000529AFE /* SwipeableCardView.xib in Resources */,
 				521DF7CC23BEA47B00B275A9 /* Assets.xcassets in Resources */,
 				521DF80023BEB53E00B275A9 /* HomeViewController.xib in Resources */,
+				5212E3C52421B10B008AB9D0 /* SettingsTextFieldCell.xib in Resources */,
 				52223EDA23C3EED9004E9B4B /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,6 +503,7 @@
 				5233276823C6B52300ED014E /* LoginViewModel.swift in Sources */,
 				5233276623C6B4EA00ED014E /* LoginCoordinatorDelegate.swift in Sources */,
 				52223ED423C3EE35004E9B4B /* SettingsCoordinatorDelegate.swift in Sources */,
+				5212E3C42421B10B008AB9D0 /* SettingsTextFieldCell.swift in Sources */,
 				52F609F023D699F3005BCA61 /* PMPTextField.swift in Sources */,
 				521DF7FC23BEB50000B275A9 /* HomeViewModel.swift in Sources */,
 				521DF7FA23BEB4C500B275A9 /* HomeCoordinatorDelegate.swift in Sources */,

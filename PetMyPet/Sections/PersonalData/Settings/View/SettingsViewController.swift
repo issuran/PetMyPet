@@ -26,8 +26,8 @@ class SettingsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-//        tableView.register(SettingsImageCell.self, forCellReuseIdentifier: "SettingsImageCell")
         tableView.register(UINib(nibName: "SettingsImageCell", bundle: nil), forCellReuseIdentifier: "SettingsImageCell")
+        tableView.register(UINib(nibName: "SettingsTextFieldCell", bundle: nil), forCellReuseIdentifier: "SettingsTextFieldCell")
         
         self.tableView.rowHeight = UITableView.automaticDimension;
         self.tableView.estimatedRowHeight = 44.0; // set to whatever your "average" cell height is
@@ -60,24 +60,19 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsImageCell") as? SettingsImageCell
-            cell?.imgOne.imageView?.image = #imageLiteral(resourceName: "AppLogo")
-            cell?.imgTwo.imageView?.image = #imageLiteral(resourceName: "Happy")
-            cell?.imgThree.imageView?.image = #imageLiteral(resourceName: "First")
             return cell!
         }
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = "Teste"
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return section == 0 ? "" : "Header"
+        else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsTextFieldCell") as? SettingsTextFieldCell
+            cell?.textField.labelPlaceholderTitle.text = viewModel?.settingsTitle[indexPath.section]
+            return cell!
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
