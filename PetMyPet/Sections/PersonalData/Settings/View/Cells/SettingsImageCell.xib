@@ -19,11 +19,11 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSO-9W-ELQ">
                         <rect key="frame" x="0.0" y="0.0" width="359" height="244"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLQ-lJ-7FP" customClass="PMPButton" customModule="Pet_My_Pet" customModuleProvider="target">
-                                <rect key="frame" x="241" y="126" width="110" height="110"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKu-8N-dLq" userLabel="OneButton" customClass="PMPButton" customModule="Pet_My_Pet" customModuleProvider="target">
+                                <rect key="frame" x="8" y="8" width="225" height="225"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="110" id="4sK-R3-jnT"/>
-                                    <constraint firstAttribute="height" constant="110" id="Kdg-JP-cJw"/>
+                                    <constraint firstAttribute="width" constant="225" id="J03-iv-Omr"/>
+                                    <constraint firstAttribute="height" constant="225" id="V7b-Fo-fiV"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="Plus"/>
                                 <userDefinedRuntimeAttributes>
@@ -33,9 +33,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="chooseThirdImageAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="btP-un-8gU"/>
+                                    <action selector="chooseFirstImageAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="A0q-YN-uM8"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ibb-y7-BPU">
+                                <rect key="frame" x="8" y="8" width="225" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="KXF-5l-bzX"/>
+                                    <constraint firstAttribute="width" constant="225" id="b2R-Gn-i6Z"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqK-1b-z50" customClass="PMPButton" customModule="Pet_My_Pet" customModuleProvider="target">
                                 <rect key="frame" x="241" y="8" width="110" height="110"/>
                                 <constraints>
@@ -53,36 +60,54 @@
                                     <action selector="chooseSecondImageAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uex-FP-PP7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKu-8N-dLq" customClass="PMPButton" customModule="Pet_My_Pet" customModuleProvider="target">
-                                <rect key="frame" x="8" y="8" width="225" height="225"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qvI-SG-Tbr">
+                                <rect key="frame" x="241" y="8" width="110" height="110"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="225" id="J03-iv-Omr"/>
-                                    <constraint firstAttribute="height" constant="225" id="V7b-Fo-fiV"/>
+                                    <constraint firstAttribute="height" constant="110" id="Udq-vz-WcL"/>
+                                    <constraint firstAttribute="width" constant="110" id="a32-QO-95p"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="Plus"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldBounce" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="22"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVD-oY-vjC" userLabel="ThreeButton">
+                                <rect key="frame" x="241" y="126" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="5LJ-tE-TNf"/>
+                                    <constraint firstAttribute="height" constant="110" id="Z5T-3B-EuI"/>
+                                </constraints>
+                                <state key="normal" image="Plus"/>
                                 <connections>
-                                    <action selector="chooseFirstImageAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="A0q-YN-uM8"/>
+                                    <action selector="chooseThirdImageAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Hy2-Fb-AqZ"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DgR-m5-GOE">
+                                <rect key="frame" x="241" y="126" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="Ba1-XW-ulZ"/>
+                                    <constraint firstAttribute="width" constant="110" id="Sy9-gk-M5K"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="aqK-1b-z50" firstAttribute="top" secondItem="QSO-9W-ELQ" secondAttribute="top" constant="8" id="0Pd-bX-seS"/>
-                            <constraint firstAttribute="bottom" secondItem="bLQ-lJ-7FP" secondAttribute="bottom" constant="8" id="9zN-wE-lX6"/>
-                            <constraint firstAttribute="height" constant="244" id="ASD-Ze-LWB"/>
-                            <constraint firstItem="bLQ-lJ-7FP" firstAttribute="top" secondItem="aqK-1b-z50" secondAttribute="bottom" constant="8" id="JXw-dG-5JH"/>
+                            <constraint firstItem="qvI-SG-Tbr" firstAttribute="leading" secondItem="iKu-8N-dLq" secondAttribute="trailing" constant="8" id="1gD-gW-qAU"/>
+                            <constraint firstItem="ibb-y7-BPU" firstAttribute="leading" secondItem="QSO-9W-ELQ" secondAttribute="leading" constant="8" id="KDx-um-BK7"/>
+                            <constraint firstItem="qvI-SG-Tbr" firstAttribute="top" secondItem="QSO-9W-ELQ" secondAttribute="top" constant="8" id="MSA-ua-7ky"/>
+                            <constraint firstItem="ibb-y7-BPU" firstAttribute="top" secondItem="QSO-9W-ELQ" secondAttribute="top" constant="8" id="NRw-Vn-h4U"/>
+                            <constraint firstItem="aqK-1b-z50" firstAttribute="leading" secondItem="ibb-y7-BPU" secondAttribute="trailing" constant="8" id="PMg-kW-GgC"/>
+                            <constraint firstItem="DgR-m5-GOE" firstAttribute="top" secondItem="aqK-1b-z50" secondAttribute="bottom" constant="8" id="SEP-rp-4A6"/>
+                            <constraint firstAttribute="bottom" secondItem="DgR-m5-GOE" secondAttribute="bottom" constant="8" id="V19-zV-fev"/>
+                            <constraint firstItem="DgR-m5-GOE" firstAttribute="leading" secondItem="iKu-8N-dLq" secondAttribute="trailing" constant="8" id="Xxm-wt-gyl"/>
+                            <constraint firstAttribute="trailing" secondItem="tVD-oY-vjC" secondAttribute="trailing" constant="8" id="Y7Y-3Y-Dcu"/>
                             <constraint firstItem="iKu-8N-dLq" firstAttribute="leading" secondItem="QSO-9W-ELQ" secondAttribute="leading" constant="8" id="Zyb-rg-wqr"/>
                             <constraint firstAttribute="width" constant="359" id="avr-Fm-pKY"/>
-                            <constraint firstItem="bLQ-lJ-7FP" firstAttribute="leading" secondItem="iKu-8N-dLq" secondAttribute="trailing" constant="8" id="ihM-xp-sOi"/>
+                            <constraint firstAttribute="trailing" secondItem="qvI-SG-Tbr" secondAttribute="trailing" constant="8" id="c5b-aQ-SCs"/>
+                            <constraint firstItem="tVD-oY-vjC" firstAttribute="top" secondItem="aqK-1b-z50" secondAttribute="bottom" constant="8" id="hOO-ES-fVX"/>
+                            <constraint firstAttribute="trailing" secondItem="DgR-m5-GOE" secondAttribute="trailing" constant="8" id="idb-Gb-7kN"/>
+                            <constraint firstItem="tVD-oY-vjC" firstAttribute="top" secondItem="qvI-SG-Tbr" secondAttribute="bottom" constant="8" id="ipD-NK-4bi"/>
+                            <constraint firstItem="tVD-oY-vjC" firstAttribute="leading" secondItem="iKu-8N-dLq" secondAttribute="trailing" constant="8" id="nhr-Ya-blh"/>
+                            <constraint firstAttribute="bottom" secondItem="tVD-oY-vjC" secondAttribute="bottom" constant="8" id="rMY-o9-efz"/>
                             <constraint firstItem="iKu-8N-dLq" firstAttribute="top" secondItem="QSO-9W-ELQ" secondAttribute="top" constant="8" id="t5W-Wc-o2u"/>
                             <constraint firstAttribute="trailing" secondItem="aqK-1b-z50" secondAttribute="trailing" constant="8" id="utU-Tx-ZAW"/>
-                            <constraint firstAttribute="trailing" secondItem="bLQ-lJ-7FP" secondAttribute="trailing" constant="8" id="xv3-h6-b7i"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -95,9 +120,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="imgOne" destination="iKu-8N-dLq" id="BBZ-qk-ioD"/>
-                <outlet property="imgThree" destination="bLQ-lJ-7FP" id="l2p-fy-6tk"/>
-                <outlet property="imgTwo" destination="aqK-1b-z50" id="XKs-3W-KQw"/>
+                <outlet property="imgOne" destination="ibb-y7-BPU" id="1dZ-xY-tkf"/>
+                <outlet property="imgThree" destination="DgR-m5-GOE" id="WnN-xb-QZk"/>
+                <outlet property="imgTwo" destination="qvI-SG-Tbr" id="Bji-Em-E0T"/>
                 <outlet property="viewContainer" destination="QSO-9W-ELQ" id="EH4-hF-tIC"/>
             </connections>
             <point key="canvasLocation" x="110.14492753623189" y="53.571428571428569"/>
