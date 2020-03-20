@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5212E3C42421B10B008AB9D0 /* SettingsTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5212E3C22421B10B008AB9D0 /* SettingsTextFieldCell.swift */; };
 		5212E3C52421B10B008AB9D0 /* SettingsTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5212E3C32421B10B008AB9D0 /* SettingsTextFieldCell.xib */; };
+		5212E3C824225ADA008AB9D0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5212E3C724225ADA008AB9D0 /* BaseViewController.swift */; };
 		521DF7C623BEA47A00B275A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DF7C523BEA47A00B275A9 /* AppDelegate.swift */; };
 		521DF7C823BEA47A00B275A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DF7C723BEA47A00B275A9 /* SceneDelegate.swift */; };
 		521DF7CC23BEA47B00B275A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 521DF7CB23BEA47B00B275A9 /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		5212E3C22421B10B008AB9D0 /* SettingsTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTextFieldCell.swift; sourceTree = "<group>"; };
 		5212E3C32421B10B008AB9D0 /* SettingsTextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTextFieldCell.xib; sourceTree = "<group>"; };
+		5212E3C724225ADA008AB9D0 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		521DF7C223BEA47A00B275A9 /* Pet My Pet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pet My Pet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		521DF7C523BEA47A00B275A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		521DF7C723BEA47A00B275A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		5212E3C624225AAC008AB9D0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5212E3C724225ADA008AB9D0 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		521DF7B923BEA47900B275A9 = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +197,7 @@
 		521DF7E823BEAFE500B275A9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				5212E3C624225AAC008AB9D0 /* Base */,
 				52DCEDC923CEA8AF00D5D659 /* Utils */,
 				52223EDC23C3EFAC004E9B4B /* Components */,
 				521DF7EF23BEB27F00B275A9 /* Protocols */,
@@ -515,6 +526,7 @@
 				521DF7C823BEA47A00B275A9 /* SceneDelegate.swift in Sources */,
 				5233276B23C6B55B00ED014E /* LoginViewController.swift in Sources */,
 				52223ED923C3EED9004E9B4B /* SettingsViewController.swift in Sources */,
+				5212E3C824225ADA008AB9D0 /* BaseViewController.swift in Sources */,
 				521DF7F823BEB3E700B275A9 /* HomeCoordinator.swift in Sources */,
 				52DD3E7B23FF7B0200BF443F /* SettingsImageCell.swift in Sources */,
 				52223ED623C3EEBC004E9B4B /* SettingsViewModel.swift in Sources */,

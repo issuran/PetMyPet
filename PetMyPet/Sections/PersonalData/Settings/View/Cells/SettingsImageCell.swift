@@ -87,7 +87,7 @@ class SettingsImageCell: UITableViewCell, UIImagePickerControllerDelegate, UINav
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[.originalImage] as? UIImage {
             self.tempButton.setImage(pickedImage, for: .normal)
-            self.imgOne.contentMode = .scaleAspectFit
+            self.tempButton.contentMode = .scaleAspectFit
         }
         picker.dismiss(animated: true, completion: nil)
     }
