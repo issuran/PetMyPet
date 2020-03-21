@@ -11,11 +11,12 @@ import UIKit
 class SettingsImageCell: UITableViewCell, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var viewContainer: UIView!
-    @IBOutlet weak var imgOne: PMPButton!
-    @IBOutlet weak var imgTwo: PMPButton!
-    @IBOutlet weak var imgThree: PMPButton!
     
-    var tempButton: PMPButton!
+    @IBOutlet weak var imgOne: UIImageView!
+    @IBOutlet weak var imgTwo: UIImageView!
+    @IBOutlet weak var imgThree: UIImageView!
+    
+    var tempImg: UIImageView!
     var imagePicker = UIImagePickerController()
 
     override func awakeFromNib() {
@@ -27,17 +28,17 @@ class SettingsImageCell: UITableViewCell, UIImagePickerControllerDelegate, UINav
     }
     
     @IBAction func chooseFirstImageAction(_ sender: Any) {
-        tempButton = imgOne
+        tempImg = imgOne
         selectOriginSource()
     }
     
     @IBAction func chooseSecondImageAction(_ sender: Any) {
-        tempButton = imgTwo
+        tempImg = imgTwo
         selectOriginSource()
     }
     
     @IBAction func chooseThirdImageAction(_ sender: Any) {
-        tempButton = imgThree
+        tempImg = imgThree
         selectOriginSource()
     }
     
@@ -86,8 +87,7 @@ class SettingsImageCell: UITableViewCell, UIImagePickerControllerDelegate, UINav
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[.originalImage] as? UIImage {
-            self.tempButton.setImage(pickedImage, for: .normal)
-            self.tempButton.contentMode = .scaleAspectFit
+            self.tempImg.image = pickedImage
         }
         picker.dismiss(animated: true, completion: nil)
     }
