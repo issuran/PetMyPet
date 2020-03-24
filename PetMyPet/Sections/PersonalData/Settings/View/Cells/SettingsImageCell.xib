@@ -67,7 +67,7 @@
                                     <constraint firstAttribute="width" constant="110" id="a32-QO-95p"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVD-oY-vjC" userLabel="ThreeButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVD-oY-vjC" userLabel="ThreeButton" customClass="PMPButton" customModule="Pet_My_Pet" customModuleProvider="target">
                                 <rect key="frame" x="241" y="126" width="110" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="5LJ-tE-TNf"/>
@@ -120,6 +120,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="btnOne" destination="iKu-8N-dLq" id="UUy-gf-aMR"/>
+                <outlet property="btnThree" destination="tVD-oY-vjC" id="jPh-Ow-twd"/>
+                <outlet property="btnTwo" destination="aqK-1b-z50" id="2MV-CL-pdh"/>
                 <outlet property="imgOne" destination="ibb-y7-BPU" id="1dZ-xY-tkf"/>
                 <outlet property="imgThree" destination="DgR-m5-GOE" id="WnN-xb-QZk"/>
                 <outlet property="imgTwo" destination="qvI-SG-Tbr" id="Bji-Em-E0T"/>

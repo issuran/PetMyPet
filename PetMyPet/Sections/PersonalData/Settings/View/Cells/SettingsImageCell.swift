@@ -16,7 +16,12 @@ class SettingsImageCell: UITableViewCell, UIImagePickerControllerDelegate, UINav
     @IBOutlet weak var imgTwo: UIImageView!
     @IBOutlet weak var imgThree: UIImageView!
     
+    @IBOutlet weak var btnOne: PMPButton!
+    @IBOutlet weak var btnTwo: PMPButton!
+    @IBOutlet weak var btnThree: PMPButton!
+    
     var tempImg: UIImageView!
+    var tempBtn: PMPButton!
     var imagePicker = UIImagePickerController()
 
     override func awakeFromNib() {
@@ -29,16 +34,19 @@ class SettingsImageCell: UITableViewCell, UIImagePickerControllerDelegate, UINav
     
     @IBAction func chooseFirstImageAction(_ sender: Any) {
         tempImg = imgOne
+        tempBtn = btnOne
         selectOriginSource()
     }
     
     @IBAction func chooseSecondImageAction(_ sender: Any) {
         tempImg = imgTwo
+        tempBtn = btnTwo
         selectOriginSource()
     }
     
     @IBAction func chooseThirdImageAction(_ sender: Any) {
         tempImg = imgThree
+        tempBtn = btnThree
         selectOriginSource()
     }
     
@@ -88,6 +96,7 @@ class SettingsImageCell: UITableViewCell, UIImagePickerControllerDelegate, UINav
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[.originalImage] as? UIImage {
             self.tempImg.image = pickedImage
+            self.tempBtn.setImage(nil, for: .normal)
         }
         picker.dismiss(animated: true, completion: nil)
     }
