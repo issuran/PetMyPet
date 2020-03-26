@@ -36,12 +36,17 @@
                                     <action selector="chooseFirstImageAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="A0q-YN-uM8"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ibb-y7-BPU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ibb-y7-BPU">
                                 <rect key="frame" x="8" y="8" width="225" height="225"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="225" id="KXF-5l-bzX"/>
                                     <constraint firstAttribute="width" constant="225" id="b2R-Gn-i6Z"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqK-1b-z50" customClass="PMPButton" customModule="Pet_My_Pet" customModuleProvider="target">
                                 <rect key="frame" x="241" y="8" width="110" height="110"/>
@@ -60,12 +65,17 @@
                                     <action selector="chooseSecondImageAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uex-FP-PP7"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qvI-SG-Tbr">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qvI-SG-Tbr">
                                 <rect key="frame" x="241" y="8" width="110" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="Udq-vz-WcL"/>
                                     <constraint firstAttribute="width" constant="110" id="a32-QO-95p"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVD-oY-vjC" userLabel="ThreeButton" customClass="PMPButton" customModule="Pet_My_Pet" customModuleProvider="target">
                                 <rect key="frame" x="241" y="126" width="110" height="110"/>
@@ -78,12 +88,17 @@
                                     <action selector="chooseThirdImageAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Hy2-Fb-AqZ"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DgR-m5-GOE">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DgR-m5-GOE">
                                 <rect key="frame" x="241" y="126" width="110" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="Ba1-XW-ulZ"/>
                                     <constraint firstAttribute="width" constant="110" id="Sy9-gk-M5K"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
