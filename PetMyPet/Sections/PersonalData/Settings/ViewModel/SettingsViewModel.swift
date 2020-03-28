@@ -11,7 +11,7 @@ import Foundation
 class SettingsViewModel {
     weak var delegate: SettingsCoordinatorDelegate!
     
-    var settingsTitle: [String] = ["", "Nome", "Idade"]
+    var settingsTitle: [String] = ["", "Nome", "Idade", "Distancia"]
     
     func callHome() {
         delegate.callHome(self)
