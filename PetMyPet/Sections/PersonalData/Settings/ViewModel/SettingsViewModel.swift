@@ -8,6 +8,15 @@
 
 import Foundation
 
+enum Sections {
+    case photos     // done - SettingsImageCell
+    case name       // done - SettingsTextFieldCell
+    case age        // maybe - check SettingsTextFieldCell only number
+    case location   // get users location
+    case range      // slider
+    case gender     // dropbox
+}
+
 class SettingsViewModel {
     weak var delegate: SettingsCoordinatorDelegate!
     
